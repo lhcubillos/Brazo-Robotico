@@ -1,0 +1,7 @@
+MO seven_seg NULL seven_seg.v vlg6F/seven__seg.bin 1467135815
+MO transmisor_serial NULL transmisor_serial.v vlg19/transmisor__serial.bin 1467135815
+MO SevenSeg NULL SevenSeg.v vlg58/_seven_seg.bin 1467135815
+MO main NULL main.v vlg2D/main.bin 1467135815
+MO bcd NULL bcd.v vlg65/bcd.bin 1467135815
+MO receptor_serial NULL receptor_serial.v vlg53/receptor__serial.bin 1467135815
+MO clockDivider NULL clockDivider.v vlg4B/clock_divider.bin 1467135815

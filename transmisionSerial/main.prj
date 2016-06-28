@@ -1,0 +1,7 @@
+verilog work "seven_seg.v"
+verilog work "bcd.v"
+verilog work "transmisor_serial.v"
+verilog work "SevenSeg.v"
+verilog work "receptor_serial.v"
+verilog work "clockDivider.v"
+verilog work "main.v"
