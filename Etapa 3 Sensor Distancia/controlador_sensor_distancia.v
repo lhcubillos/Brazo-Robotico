@@ -30,7 +30,7 @@ module controlador_sensor_distancia(
     );
 	 
 	 parameter ENVIANDO_PULSO = 2'b00, RECIBIENDO_PULSO = 2'b01, ESPERANDO_PULSO = 2'b10, EN_ESPERA = 2'b11;
-	 parameter tiempo10us = 500, TIMEOUT = 5000000;
+	 parameter tiempo10us = 500, TIMEOUT = 500000;
 	 reg [30:0] contador_10us;
 	 reg [30:0] contador_echo;
 	 reg [23:0] contador_en_espera;
@@ -39,6 +39,9 @@ module controlador_sensor_distancia(
 	 reg [30:0] contador_timeout;
 	 
 	 reg [23:0] contador_extra;
+	 
+	 reg [4:0] distancias_anteriores[8:0];
+	 
 	 
 	 initial begin
 		state = ENVIANDO_PULSO;
@@ -81,7 +84,20 @@ module controlador_sensor_distancia(
 				distancia_temporal = distancia_temporal + 1;
 			end
 			else begin
+//				distancias_anteriores[0] = distancias_anteriores[1];
+//				distancias_anteriores[1] = distancias_anteriores[2];
+//				distancias_anteriores[2] = distancias_anteriores[3];
+//				distancias_anteriores[3] = distancias_anteriores[4];
+//				distancias_anteriores[4] = distancia_temporal - 1;
+//				
+//				if (distancias_anteriores[0] == distancias_anteriores[1] && 
+//					distancias_anteriores[1] == distancias_anteriores[2] && 
+//					distancias_anteriores[2] == distancias_anteriores[3] && 
+//					distancias_anteriores[3] == distancias_anteriores[4]) begin
+//					distancia = distancias_anteriores[4];
+//				end		
 				distancia = distancia_temporal - 1;
+				
 				distancia_temporal = 0;
 				contador_echo = 0;
 				contador_en_espera = 0;

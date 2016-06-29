@@ -1,5 +1,6 @@
 verilog work "transmisor_serial.v"
 verilog work "seven_seg.v"
+verilog work "ROM_mapeo_distancia.v"
 verilog work "receptor_serial.v"
 verilog work "clockDivider.v"
 verilog work "bcd.v"

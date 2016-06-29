@@ -8,7 +8,7 @@ output reg [7:0] distancia_mapeada;
 
 reg [7:0] Mem[10:0];
 
-always @ (address)
+always @ (distancia)
 begin
 
 

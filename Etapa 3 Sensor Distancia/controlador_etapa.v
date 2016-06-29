@@ -66,6 +66,9 @@ module controlador_etapa(
 	 assign ang_servo_5 = 128;
 	 
 	 
+	 wire clk_div_transmisor;
+	 wire clk_div_receptor;
+	 
 	 reg [3:0] state;
 	 
 	 initial begin

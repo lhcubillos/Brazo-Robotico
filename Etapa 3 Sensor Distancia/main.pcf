@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Jun 29 14:05:35 2016
+// Written by: Map P.20131013 on Wed Jun 29 16:20:25 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -18,6 +18,8 @@ COMP "leds<2>" LOCATE = SITE "P7" LEVEL 1;
 COMP "leds<3>" LOCATE = SITE "P6" LEVEL 1;
 COMP "leds<4>" LOCATE = SITE "N5" LEVEL 1;
 COMP "leds<5>" LOCATE = SITE "N4" LEVEL 1;
+COMP "leds<6>" LOCATE = SITE "P4" LEVEL 1;
+COMP "leds<7>" LOCATE = SITE "G1" LEVEL 1;
 COMP "seg<0>" LOCATE = SITE "L14" LEVEL 1;
 COMP "seg<1>" LOCATE = SITE "H12" LEVEL 1;
 COMP "seg<2>" LOCATE = SITE "N14" LEVEL 1;

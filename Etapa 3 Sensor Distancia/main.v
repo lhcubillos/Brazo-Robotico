@@ -13,7 +13,7 @@ module main(
 	output servo3,
 	output servo4,
 	output servo5,
-	output [5:0] leds,
+	output [7:0] leds,
 	output trig,
 	output [7:0] seg,
 	output [3:0] an
@@ -33,7 +33,6 @@ module main(
 		wire [7:0] pos5;
 		
 		wire [8:0] distancia;
-		assign leds[3:0] = 0;
 		wire [13:0] decimal;
 		
 		
@@ -45,7 +44,7 @@ module main(
 		wire [7:0] ang_servo_4;
 		wire [7:0] ang_servo_5;
 		
-		
+		assign leds = decimal[7:0];
 		
 		/*
 		clockDivider clockDivider (
@@ -91,8 +90,8 @@ module main(
 			.clk(clk),
 			
 			.distancia(distancia),
-			.trig(trig),
-			.state(leds[5:4])
+			.trig(trig)
+			//.state(leds[5:4])
 			//.decimal(decimal)
 		);
 		
@@ -113,7 +112,7 @@ module main(
 		
 		SevenSeg SevenSeg(
 			.clk(clk),
-			.decimal(decimal),
+			.decimal(distancia),
 			
 			.an(an),
 			.seg(seg)

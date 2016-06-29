@@ -46,8 +46,8 @@ NET "an<1>" LOC = "J12"; # Bank = 1, Signal name = AN1
 NET "an<0>" LOC = "F12"; # Bank = 1, Signal name = AN0
 
 # Pin assignment for LEDs
-#NET "leds<7>" LOC = "G1" ; # Bank = 3, Signal name = LD7
-#NET "leds<6>" LOC = "P4" ; # Bank = 2, Signal name = LD6
+NET "leds<7>" LOC = "G1" ; # Bank = 3, Signal name = LD7
+NET "leds<6>" LOC = "P4" ; # Bank = 2, Signal name = LD6
 NET "leds<5>" LOC = "N4" ;  # Bank = 2, Signal name = LD5
 NET "leds<4>" LOC = "N5" ;  # Bank = 2, Signal name = LD4
 NET "leds<3>" LOC = "P6" ; # Bank = 2, Signal name = LD3
