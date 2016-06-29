@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompilers" num="261" delta="old" ><arg fmt="%s" index="1">&quot;main.v&quot; line 62 </arg>Connection to output port &apos;<arg fmt="%s" index="2">servo_pulse</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="261" delta="old" ><arg fmt="%s" index="1">&quot;main.v&quot; line 68 </arg>Connection to output port &apos;<arg fmt="%s" index="2">servo_pulse</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="261" delta="old" ><arg fmt="%s" index="1">&quot;main.v&quot; line 74 </arg>Connection to output port &apos;<arg fmt="%s" index="2">servo_pulse</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="261" delta="old" ><arg fmt="%s" index="1">&quot;main.v&quot; line 80 </arg>Connection to output port &apos;<arg fmt="%s" index="2">servo_pulse</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="261" delta="old" ><arg fmt="%s" index="1">&quot;main.v&quot; line 86 </arg>Connection to output port &apos;<arg fmt="%s" index="2">servo_pulse</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;controlador_etapa.v&quot; line 101 </arg>Connection to input port &apos;<arg fmt="%s" index="2">constante</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;controlador_etapa.v&quot; line 107 </arg>Connection to input port &apos;<arg fmt="%s" index="2">constante</arg>&apos; does not match port size
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">data</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">data</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">count</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1305" delta="old" >Output &lt;<arg fmt="%s" index="1">timeout</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">contador_extra</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1305" delta="old" >Output &lt;<arg fmt="%s" index="1">decimal</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">00000000000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">inicio_transmision</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">data4</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">data3</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">data2</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">data1</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">data&lt;31:8&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">memreg</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">distancia</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">z</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000101</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">y</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">x</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000101</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">recepcion_ang_4</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">recepcion_ang_3</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">recepcion_ang_2</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">cont_y</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">cont_x</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">sw2</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">sw</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">state</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">pos5</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">pos4</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">pos3</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">pos2</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">pos1</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">decimal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">btn5</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">btn4</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">btn3</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">btn2</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">bn1</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">receptor_serial</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">controlador_etapa</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">clockDivider_receptor</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">controlador_etapa</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">servo_pulse_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">servo_pwm1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">6 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;servo_pulse_2&gt; &lt;servo_pulse_3&gt; &lt;servo_pulse_4&gt; &lt;servo_pulse_5&gt; &lt;servo_pulse_6&gt; &lt;servo_pulse_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">servo_pulse_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">servo_pwm2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">6 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;servo_pulse_2&gt; &lt;servo_pulse_3&gt; &lt;servo_pulse_4&gt; &lt;servo_pulse_5&gt; &lt;servo_pulse_6&gt; &lt;servo_pulse_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">servo_pulse_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">servo_pwm3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">6 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;servo_pulse_2&gt; &lt;servo_pulse_3&gt; &lt;servo_pulse_4&gt; &lt;servo_pulse_5&gt; &lt;servo_pulse_6&gt; &lt;servo_pulse_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">servo_pulse_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">servo_pwm4</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">6 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;servo_pulse_2&gt; &lt;servo_pulse_3&gt; &lt;servo_pulse_4&gt; &lt;servo_pulse_5&gt; &lt;servo_pulse_6&gt; &lt;servo_pulse_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">servo_pulse_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">servo_pwm5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">6 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;servo_pulse_2&gt; &lt;servo_pulse_3&gt; &lt;servo_pulse_4&gt; &lt;servo_pulse_5&gt; &lt;servo_pulse_6&gt; &lt;servo_pulse_7&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">sseg_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BCDTo7Seg</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">sseg_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BCDTo7Seg</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">sseg_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BCDTo7Seg</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">servo_pulse_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">servo_pwm1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">servo_pulse_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">servo_pwm2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">servo_pulse_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">servo_pwm3</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">servo_pulse_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">servo_pwm4</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">servo_pulse_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">servo_pwm5</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">servo_pulse</arg>&lt;<arg fmt="%d" index="2">7</arg>:<arg fmt="%d" index="3">1</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">servo_pwm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">state_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">receptor_serial</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">sseg_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">seven_seg</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">sseg_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">seven_seg</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">sseg_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">seven_seg</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">seg_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">seven_seg</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">contador_en_espera_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">controlador_sensor_distancia</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">contador_en_espera_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">controlador_sensor_distancia</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">contador_en_espera_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">controlador_sensor_distancia</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">contador_en_espera_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">controlador_sensor_distancia</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">contador_en_espera_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">controlador_sensor_distancia</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">contador_en_espera_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">controlador_sensor_distancia</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">contador_en_espera_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">controlador_sensor_distancia</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">contador_en_espera_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">controlador_sensor_distancia</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_temporal_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_temporal_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_temporal_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_temporal_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_temporal_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_temporal_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_temporal_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_temporal_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_temporal_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/state_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/state_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_50_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_50_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_50_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_50_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_50_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_50_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/listo</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/data_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/data_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/data_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/data_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/data_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/data_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/data_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/data_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_3_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_3_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_3_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_3_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_3_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_3_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_3_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_3_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_1_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_1_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_1_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_1_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_1_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_1_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_1_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_1_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_2_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_2_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_2_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_2_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_2_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_2_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_2_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_2_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_4_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_4_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_4_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_4_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_4_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_4_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_4_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/angulo_servo_4_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_servo_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_servo_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_nivelacion_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_nivelacion_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_nivelacion_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_nivelacion_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_nivelacion_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_nivelacion_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_nivelacion_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_data_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_data_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_data_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_data_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_data_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/cont_data_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/count_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/clockDivider_receptor/clk</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">SevenSeg/BCDTo7Seg/seg_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">main</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">SevenSeg/BCDTo7Seg/seg_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">main</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">SevenSeg/BCDTo7Seg/seg_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">main</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">SevenSeg/BCDTo7Seg/seg_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">main</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">SevenSeg/BCDTo7Seg/seg_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">main</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">SevenSeg/BCDTo7Seg/seg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">main</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">SevenSeg/BCDTo7Seg/seg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">main</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">SevenSeg/BCDTo7Seg/sseg_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">main</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">SevenSeg/BCDTo7Seg/sseg_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">main</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">SevenSeg/BCDTo7Seg/sseg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">main</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">SevenSeg/BCDTo7Seg/sseg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">main</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+</messages>
+

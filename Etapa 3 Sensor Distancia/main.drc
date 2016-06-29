@@ -1,0 +1,29 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Wed Jun 29 14:05:55 2016
+
+drc -z main.ncd main.pcf
+
+WARNING:PhysDesignRules:367 - The signal <sw_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sw2_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <canal_serial_receptor_IBUF> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp trig is
+   set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp servo1 is
+   set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp servo2 is
+   set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp servo3 is
+   set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp servo4 is
+   set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp servo5 is
+   set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   canal_serial_transmisor is set but the tri state is not configured. 
+DRC detected 0 errors and 10 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

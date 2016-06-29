@@ -20,15 +20,19 @@
 //////////////////////////////////////////////////////////////////////////////////
 module clockDivider(
     input clock,
+	 input [15:0] constante,
+	 
     output reg clk
     );
 	 
-	reg [24:0] count;
+	reg [25:0] count;
 	initial count = 0;
+	
+	//parameter constante = 50;
 	 
 	always @(posedge(clock)) begin
 		
-		if (count == 500000) begin
+		if (count == constante) begin
 			count <= 0;
 			clk <= ~clk;
 		end

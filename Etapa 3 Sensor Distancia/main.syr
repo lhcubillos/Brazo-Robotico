@@ -1,0 +1,1089 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "transmisor_serial.v" in library work
+Compiling verilog file "seven_seg.v" in library work
+Module <transmisor_serial> compiled
+Compiling verilog file "receptor_serial.v" in library work
+Module <seven_seg> compiled
+Compiling verilog file "clockDivider.v" in library work
+Module <receptor_serial> compiled
+Compiling verilog file "bcd.v" in library work
+Module <clockDivider> compiled
+Compiling verilog file "SevenSeg.v" in library work
+Module <bcd> compiled
+Compiling verilog file "servo_pwm.v" in library work
+Module <SevenSeg> compiled
+Compiling verilog file "controlador_sensor_distancia.v" in library work
+Module <servo_pwm> compiled
+Compiling verilog file "controlador_etapa.v" in library work
+Module <controlador_sensor_distancia> compiled
+Compiling verilog file "main.v" in library work
+Module <controlador_etapa> compiled
+Module <main> compiled
+No errors in compilation
+Analysis of file <"main.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <main> in library <work>.
+
+Analyzing hierarchy for module <servo_pwm> in library <work> with parameters.
+	ClkDiv = "00000000000000000000000011000011"
+	init = "000010001100"
+
+Analyzing hierarchy for module <controlador_sensor_distancia> in library <work> with parameters.
+	ENVIANDO_PULSO = "00"
+	EN_ESPERA = "11"
+	ESPERANDO_PULSO = "10"
+	RECIBIENDO_PULSO = "01"
+	TIMEOUT = "00000000010011000100101101000000"
+	tiempo10us = "00000000000000000000000111110100"
+
+Analyzing hierarchy for module <controlador_etapa> in library <work> with parameters.
+	BUSCANDO_BAJANDO = "00000000000000000000000000000001"
+	BUSCANDO_SUBIENDO = "00000000000000000000000000000000"
+	DEJANDO_OBJEETO = "00000000000000000000000000000100"
+	IDLE = "00000000000000000000000000000101"
+	LEVANTANDO_OBJETO = "00000000000000000000000000000011"
+	PESCANDO_OBJETO = "00000000000000000000000000000010"
+	limite_distancia = "00000000000000000000000000001100"
+	tiempo_espera = "00000000000001100000100101101001"
+	x0cm = "00000000000000000000000000000000"
+	x5cm = "00000000000000000000000000000101"
+	xpunto = "00000000000000000000000000000111"
+	y0cm = "00000000000000000000000000000000"
+	ypunto = "00000000000000000000000000000100"
+	z0cm = "00000000000000000000000000000000"
+	z5cm = "00000000000000000000000000000101"
+
+Analyzing hierarchy for module <SevenSeg> in library <work>.
+
+Analyzing hierarchy for module <receptor_serial> in library <work> with parameters.
+	HOLA = "010"
+	LEVELING_CLOCK = "011"
+	RECEIVING = "001"
+	STAND_BY = "000"
+	ciclo = "00000000000000000000000000001010"
+	nivelacion = "00000000000000000000000000001110"
+	num_datos = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <transmisor_serial> in library <work> with parameters.
+	IDLE = "0"
+	TR = "1"
+
+Analyzing hierarchy for module <clockDivider> in library <work>.
+
+Analyzing hierarchy for module <bcd> in library <work>.
+
+Analyzing hierarchy for module <seven_seg> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <main>.
+Module <main> is correct for synthesis.
+ 
+Analyzing module <servo_pwm> in library <work>.
+	ClkDiv = 32'sb00000000000000000000000011000011
+	init = 12'b000010001100
+Module <servo_pwm> is correct for synthesis.
+ 
+Analyzing module <controlador_sensor_distancia> in library <work>.
+	ENVIANDO_PULSO = 2'b00
+	EN_ESPERA = 2'b11
+	ESPERANDO_PULSO = 2'b10
+	RECIBIENDO_PULSO = 2'b01
+	TIMEOUT = 32'sb00000000010011000100101101000000
+	tiempo10us = 32'sb00000000000000000000000111110100
+Module <controlador_sensor_distancia> is correct for synthesis.
+ 
+Analyzing module <controlador_etapa> in library <work>.
+	BUSCANDO_BAJANDO = 32'sb00000000000000000000000000000001
+	BUSCANDO_SUBIENDO = 32'sb00000000000000000000000000000000
+	DEJANDO_OBJEETO = 32'sb00000000000000000000000000000100
+	IDLE = 32'sb00000000000000000000000000000101
+	LEVANTANDO_OBJETO = 32'sb00000000000000000000000000000011
+	PESCANDO_OBJETO = 32'sb00000000000000000000000000000010
+	limite_distancia = 32'sb00000000000000000000000000001100
+	tiempo_espera = 32'sb00000000000001100000100101101001
+	x0cm = 32'sb00000000000000000000000000000000
+	x5cm = 32'sb00000000000000000000000000000101
+	xpunto = 32'sb00000000000000000000000000000111
+	y0cm = 32'sb00000000000000000000000000000000
+	ypunto = 32'sb00000000000000000000000000000100
+	z0cm = 32'sb00000000000000000000000000000000
+	z5cm = 32'sb00000000000000000000000000000101
+Module <controlador_etapa> is correct for synthesis.
+ 
+Analyzing module <receptor_serial> in library <work>.
+	HOLA = 3'b010
+	LEVELING_CLOCK = 3'b011
+	RECEIVING = 3'b001
+	STAND_BY = 3'b000
+	ciclo = 32'sb00000000000000000000000000001010
+	nivelacion = 32'sb00000000000000000000000000001110
+	num_datos = 32'sb00000000000000000000000000001000
+INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Module <receptor_serial> is correct for synthesis.
+ 
+Analyzing module <transmisor_serial> in library <work>.
+	IDLE = 1'b0
+	TR = 1'b1
+INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Module <transmisor_serial> is correct for synthesis.
+ 
+Analyzing module <clockDivider> in library <work>.
+Module <clockDivider> is correct for synthesis.
+ 
+Analyzing module <SevenSeg> in library <work>.
+Module <SevenSeg> is correct for synthesis.
+ 
+Analyzing module <bcd> in library <work>.
+Module <bcd> is correct for synthesis.
+ 
+Analyzing module <seven_seg> in library <work>.
+Module <seven_seg> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <servo_pwm>.
+    Related source file is "servo_pwm.v".
+WARNING:Xst:646 - Signal <count> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit register for signal <servo_pulse>.
+    Found 8-bit up counter for signal <ClkCount>.
+    Found 1-bit register for signal <ClkTick>.
+    Found 12-bit adder for signal <old_count_8$addsub0000> created at line 36.
+    Found 13-bit up counter for signal <PulseCount>.
+    Found 13-bit comparator less for signal <servo_pulse$cmp_lt0000> created at line 37.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <servo_pwm> synthesized.
+
+
+Synthesizing Unit <controlador_sensor_distancia>.
+    Related source file is "controlador_sensor_distancia.v".
+WARNING:Xst:1305 - Output <timeout> is never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <contador_extra> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 2-bit register for signal <state>.
+    Found 1-bit register for signal <trig>.
+    Found 9-bit register for signal <distancia>.
+    Found 31-bit up counter for signal <contador_10us>.
+    Found 31-bit comparator greatequal for signal <contador_10us$cmp_ge0000> created at line 57.
+    Found 31-bit register for signal <contador_echo>.
+    Found 31-bit adder for signal <contador_echo$addsub0000> created at line 72.
+    Found 31-bit comparator less for signal <contador_echo$cmp_lt0000> created at line 79.
+    Found 24-bit register for signal <contador_en_espera>.
+    Found 24-bit adder for signal <contador_en_espera$addsub0000> created at line 80.
+    Found 24-bit 4-to-1 multiplexer for signal <contador_en_espera$mux0000>.
+    Found 31-bit up counter for signal <contador_timeout>.
+    Found 9-bit subtractor for signal <distancia$sub0000> created at line 84.
+    Found 9-bit up counter for signal <distancia_temporal>.
+    Found 31-bit adder for signal <old_contador_10us_9$add0000> created at line 56.
+    Found 31-bit comparator greatequal for signal <state$cmp_ge0000> created at line 68.
+    Found 2-bit 4-to-1 multiplexer for signal <state$mux0000>.
+    Found 31-bit comparator greatequal for signal <trig$cmp_ge0000> created at line 57.
+    Summary:
+	inferred   3 Counter(s).
+	inferred  67 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred  26 Multiplexer(s).
+Unit <controlador_sensor_distancia> synthesized.
+
+
+Synthesizing Unit <receptor_serial>.
+    Related source file is "receptor_serial.v".
+WARNING:Xst:1305 - Output <decimal> is never assigned. Tied to value 00000000000000.
+WARNING:Xst:1780 - Signal <inicio_transmision> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <data4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <data3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <data2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <data1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <data<31:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 3-bit register for signal <state>.
+    Found 8-bit register for signal <angulo_servo_1>.
+    Found 8-bit register for signal <angulo_servo_2>.
+    Found 8-bit register for signal <angulo_servo_3>.
+    Found 8-bit register for signal <angulo_servo_4>.
+    Found 6-bit register for signal <cont_50>.
+    Found 6-bit adder for signal <cont_50$addsub0000> created at line 116.
+    Found 6-bit up counter for signal <cont_data>.
+    Found 7-bit up counter for signal <cont_nivelacion>.
+    Found 2-bit up counter for signal <cont_servo>.
+    Found 32-bit register for signal <data>.
+    Found 1-bit register for signal <listo>.
+    Found 6-bit comparator greatequal for signal <listo$cmp_ge0000> created at line 111.
+    Summary:
+	inferred   3 Counter(s).
+	inferred  74 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <receptor_serial> synthesized.
+
+
+Synthesizing Unit <transmisor_serial>.
+    Related source file is "transmisor_serial.v".
+    Found 1-bit register for signal <canal_serial>.
+    Found 1-bit 30-to-1 multiplexer for signal <$varindex0000> created at line 55.
+    Found 6-bit up counter for signal <cont_data>.
+    Found 19-bit up counter for signal <cont_delay>.
+    Found 6-bit adder for signal <old_cont_data_20$add0000> created at line 56.
+    Found 19-bit adder for signal <old_cont_delay_21$add0000> created at line 65.
+    Found 1-bit register for signal <state>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <transmisor_serial> synthesized.
+
+
+Synthesizing Unit <clockDivider>.
+    Related source file is "clockDivider.v".
+    Found 1-bit register for signal <clk>.
+    Found 26-bit up counter for signal <count>.
+    Found 26-bit comparator equal for signal <count$cmp_eq0000> created at line 35.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <clockDivider> synthesized.
+
+
+Synthesizing Unit <bcd>.
+    Related source file is "bcd.v".
+WARNING:Xst:646 - Signal <memreg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit adder for signal <$add0000> created at line 45.
+    Found 4-bit adder for signal <$add0001> created at line 45.
+    Found 4-bit adder for signal <$add0002> created at line 45.
+    Found 4-bit adder for signal <$add0003> created at line 41.
+    Found 4-bit adder for signal <$add0004> created at line 45.
+    Found 4-bit adder for signal <$add0005> created at line 41.
+    Found 4-bit adder for signal <$add0006> created at line 45.
+    Found 4-bit adder for signal <$add0007> created at line 41.
+    Found 4-bit adder for signal <$add0008> created at line 45.
+    Found 4-bit adder for signal <$add0009> created at line 37.
+    Found 4-bit adder for signal <$add0010> created at line 41.
+    Found 4-bit adder for signal <$add0011> created at line 45.
+    Found 4-bit adder for signal <$add0012> created at line 37.
+    Found 4-bit adder for signal <$add0013> created at line 41.
+    Found 4-bit adder for signal <$add0014> created at line 45.
+    Found 4-bit adder for signal <$add0015> created at line 37.
+    Found 4-bit adder for signal <$add0016> created at line 41.
+    Found 4-bit adder for signal <$add0017> created at line 45.
+    Found 4-bit adder for signal <$add0018> created at line 33.
+    Found 4-bit adder for signal <$add0019> created at line 37.
+    Found 4-bit adder for signal <$add0020> created at line 41.
+    Found 4-bit adder for signal <$add0021> created at line 45.
+    Found 4-bit adder for signal <$add0022> created at line 33.
+    Found 4-bit adder for signal <$add0023> created at line 37.
+    Found 4-bit adder for signal <$add0024> created at line 41.
+    Found 4-bit adder for signal <$add0025> created at line 45.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0000> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0001> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0002> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0003> created at line 40.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0004> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0005> created at line 40.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0006> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0007> created at line 40.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0008> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0009> created at line 36.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0010> created at line 40.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0011> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0012> created at line 36.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0013> created at line 40.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0014> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0015> created at line 36.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0016> created at line 40.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0017> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0018> created at line 32.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0019> created at line 36.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0020> created at line 40.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0021> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0022> created at line 32.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0023> created at line 36.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0024> created at line 40.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0025> created at line 44.
+    Summary:
+	inferred  26 Adder/Subtractor(s).
+	inferred  26 Comparator(s).
+Unit <bcd> synthesized.
+
+
+Synthesizing Unit <seven_seg>.
+    Related source file is "seven_seg.v".
+    Found 16x8-bit ROM for signal <seg$mux0001>.
+    Found 8-bit register for signal <seg>.
+    Found 4-bit register for signal <an_temp>.
+    Found 16-bit comparator greatequal for signal <an_temp$cmp_ge0000> created at line 29.
+    Found 16-bit up counter for signal <disp_ctr>.
+    Found 16-bit comparator lessequal for signal <old_sseg_23$cmp_le0000> created at line 32.
+    Found 16-bit comparator lessequal for signal <old_sseg_23$cmp_le0001> created at line 35.
+    Found 16-bit comparator lessequal for signal <old_sseg_23$cmp_le0002> created at line 38.
+    Found 7-bit register for signal <sseg>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <seven_seg> synthesized.
+
+
+Synthesizing Unit <controlador_etapa>.
+    Related source file is "controlador_etapa.v".
+WARNING:Xst:647 - Input <distancia> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <z> is used but never assigned. This sourceless signal will be automatically connected to value 00000101.
+WARNING:Xst:653 - Signal <y> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+WARNING:Xst:653 - Signal <x> is used but never assigned. This sourceless signal will be automatically connected to value 00000101.
+WARNING:Xst:646 - Signal <recepcion_ang_4> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <recepcion_ang_3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <recepcion_ang_2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <cont_y> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <cont_x> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | 0000                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <cont_angulo_y>.
+    Found 26-bit register for signal <cont_divider>.
+    Found 8-bit adder for signal <old_cont_angulo_y_12$add0000> created at line 119.
+    Found 8-bit subtractor for signal <old_cont_angulo_y_13$sub0000> created at line 128.
+    Found 26-bit adder for signal <old_cont_divider_11$add0000> created at line 116.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+Unit <controlador_etapa> synthesized.
+
+
+Synthesizing Unit <SevenSeg>.
+    Related source file is "SevenSeg.v".
+Unit <SevenSeg> synthesized.
+
+
+Synthesizing Unit <main>.
+    Related source file is "main.v".
+WARNING:Xst:647 - Input <sw2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <sw> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <state> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <pos5> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <pos4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <pos3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <pos2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <pos1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <decimal> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000.
+WARNING:Xst:1780 - Signal <btn5> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <btn4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <btn3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <btn2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <bn1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <main> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Adders/Subtractors                                   : 48
+ 12-bit adder                                          : 10
+ 16-bit adder                                          : 1
+ 19-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 26-bit adder                                          : 1
+ 31-bit adder                                          : 3
+ 4-bit adder                                           : 26
+ 6-bit adder                                           : 2
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 21
+ 13-bit up counter                                     : 5
+ 16-bit up counter                                     : 1
+ 19-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 26-bit up counter                                     : 2
+ 31-bit up counter                                     : 2
+ 6-bit up counter                                      : 2
+ 7-bit up counter                                      : 1
+ 8-bit up counter                                      : 5
+ 9-bit up counter                                      : 1
+# Registers                                            : 63
+ 1-bit register                                        : 43
+ 2-bit register                                        : 1
+ 24-bit register                                       : 1
+ 26-bit register                                       : 1
+ 3-bit register                                        : 1
+ 31-bit register                                       : 1
+ 4-bit register                                        : 1
+ 6-bit register                                        : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 11
+ 9-bit register                                        : 1
+# Comparators                                          : 42
+ 13-bit comparator less                                : 5
+ 16-bit comparator greatequal                          : 1
+ 16-bit comparator lessequal                           : 3
+ 26-bit comparator equal                               : 2
+ 31-bit comparator greatequal                          : 3
+ 31-bit comparator less                                : 1
+ 4-bit comparator greater                              : 26
+ 6-bit comparator greatequal                           : 1
+# Multiplexers                                         : 3
+ 1-bit 30-to-1 multiplexer                             : 1
+ 2-bit 4-to-1 multiplexer                              : 1
+ 24-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <controlador_etapa/state/FSM> on signal <state[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0
+ 0001  | 1
+-------------------
+WARNING:Xst:1290 - Hierarchical block <receptor_serial> is unconnected in block <controlador_etapa>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <clockDivider_receptor> is unconnected in block <controlador_etapa>.
+   It will be removed from the design.
+INFO:Xst:2261 - The FF/Latch <servo_pulse_1> in Unit <servo_pwm1> is equivalent to the following 6 FFs/Latches, which will be removed : <servo_pulse_2> <servo_pulse_3> <servo_pulse_4> <servo_pulse_5> <servo_pulse_6> <servo_pulse_7> 
+INFO:Xst:2261 - The FF/Latch <servo_pulse_1> in Unit <servo_pwm2> is equivalent to the following 6 FFs/Latches, which will be removed : <servo_pulse_2> <servo_pulse_3> <servo_pulse_4> <servo_pulse_5> <servo_pulse_6> <servo_pulse_7> 
+INFO:Xst:2261 - The FF/Latch <servo_pulse_1> in Unit <servo_pwm3> is equivalent to the following 6 FFs/Latches, which will be removed : <servo_pulse_2> <servo_pulse_3> <servo_pulse_4> <servo_pulse_5> <servo_pulse_6> <servo_pulse_7> 
+INFO:Xst:2261 - The FF/Latch <servo_pulse_1> in Unit <servo_pwm4> is equivalent to the following 6 FFs/Latches, which will be removed : <servo_pulse_2> <servo_pulse_3> <servo_pulse_4> <servo_pulse_5> <servo_pulse_6> <servo_pulse_7> 
+INFO:Xst:2261 - The FF/Latch <servo_pulse_1> in Unit <servo_pwm5> is equivalent to the following 6 FFs/Latches, which will be removed : <servo_pulse_2> <servo_pulse_3> <servo_pulse_4> <servo_pulse_5> <servo_pulse_6> <servo_pulse_7> 
+WARNING:Xst:1710 - FF/Latch <sseg_4> (without init value) has a constant value of 0 in block <BCDTo7Seg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sseg_5> (without init value) has a constant value of 0 in block <BCDTo7Seg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sseg_6> (without init value) has a constant value of 0 in block <BCDTo7Seg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <servo_pulse_1> of sequential type is unconnected in block <servo_pwm1>.
+WARNING:Xst:2677 - Node <servo_pulse_1> of sequential type is unconnected in block <servo_pwm2>.
+WARNING:Xst:2677 - Node <servo_pulse_1> of sequential type is unconnected in block <servo_pwm3>.
+WARNING:Xst:2677 - Node <servo_pulse_1> of sequential type is unconnected in block <servo_pwm4>.
+WARNING:Xst:2677 - Node <servo_pulse_1> of sequential type is unconnected in block <servo_pwm5>.
+WARNING:Xst:2404 -  FFs/Latches <servo_pulse<7:1>> (without init value) have a constant value of 0 in block <servo_pwm>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Adders/Subtractors                                   : 48
+ 12-bit adder                                          : 10
+ 16-bit adder                                          : 1
+ 19-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 26-bit adder                                          : 1
+ 3-bit adder                                           : 2
+ 31-bit adder                                          : 3
+ 4-bit adder                                           : 24
+ 6-bit adder                                           : 2
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 21
+ 13-bit up counter                                     : 5
+ 16-bit up counter                                     : 1
+ 19-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 26-bit up counter                                     : 2
+ 31-bit up counter                                     : 2
+ 6-bit up counter                                      : 2
+ 7-bit up counter                                      : 1
+ 8-bit up counter                                      : 5
+ 9-bit up counter                                      : 1
+# Registers                                            : 184
+ Flip-Flops                                            : 184
+# Comparators                                          : 42
+ 13-bit comparator less                                : 5
+ 16-bit comparator greatequal                          : 1
+ 16-bit comparator lessequal                           : 3
+ 26-bit comparator equal                               : 2
+ 31-bit comparator greatequal                          : 3
+ 31-bit comparator less                                : 1
+ 4-bit comparator greater                              : 26
+ 6-bit comparator greatequal                           : 1
+# Multiplexers                                         : 3
+ 1-bit 30-to-1 multiplexer                             : 1
+ 2-bit 4-to-1 multiplexer                              : 1
+ 24-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <state_2> has a constant value of 0 in block <receptor_serial>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sseg_4> (without init value) has a constant value of 0 in block <seven_seg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sseg_5> (without init value) has a constant value of 0 in block <seven_seg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sseg_6> (without init value) has a constant value of 0 in block <seven_seg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <seg_7> (without init value) has a constant value of 1 in block <seven_seg>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <main> ...
+
+Optimizing unit <servo_pwm> ...
+
+Optimizing unit <controlador_sensor_distancia> ...
+WARNING:Xst:1293 - FF/Latch <contador_en_espera_0> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <contador_en_espera_1> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contador_en_espera_0> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <contador_en_espera_1> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contador_en_espera_0> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <contador_en_espera_1> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contador_en_espera_0> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <contador_en_espera_1> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <receptor_serial> ...
+
+Optimizing unit <transmisor_serial> ...
+
+Optimizing unit <seven_seg> ...
+
+Optimizing unit <controlador_etapa> ...
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_temporal_8> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_temporal_7> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_temporal_6> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_temporal_5> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_temporal_4> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_temporal_3> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_temporal_2> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_temporal_1> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_temporal_0> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_8> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_7> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_6> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_5> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_4> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_3> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_2> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_1> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_0> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/state_0> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/state_1> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_50_0> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_50_1> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_50_2> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_50_3> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_50_4> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_50_5> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/listo> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/data_5> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/data_7> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/data_6> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/data_4> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/data_3> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/data_0> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/data_2> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/data_1> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_3_0> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_3_1> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_3_2> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_3_3> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_3_4> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_3_5> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_3_6> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_3_7> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_1_0> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_1_1> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_1_2> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_1_3> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_1_4> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_1_5> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_1_6> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_1_7> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_2_0> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_2_1> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_2_2> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_2_3> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_2_4> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_2_5> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_2_6> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_2_7> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_4_0> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_4_1> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_4_2> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_4_3> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_4_4> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_4_5> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_4_6> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/angulo_servo_4_7> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_servo_0> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_servo_1> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_nivelacion_0> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_nivelacion_1> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_nivelacion_2> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_nivelacion_3> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_nivelacion_4> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_nivelacion_5> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_nivelacion_6> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_data_0> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_data_1> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_data_2> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_data_3> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_data_4> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_data_5> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_25> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_24> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_23> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_22> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_21> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_20> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_19> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_18> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_17> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_16> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_15> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_14> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_13> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_12> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_11> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_10> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_9> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_8> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_7> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_6> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_5> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_4> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_3> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_2> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_1> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/count_0> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/clk> of sequential type is unconnected in block <main>.
+WARNING:Xst:1710 - FF/Latch <SevenSeg/BCDTo7Seg/seg_6> (without init value) has a constant value of 1 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SevenSeg/BCDTo7Seg/seg_5> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SevenSeg/BCDTo7Seg/seg_4> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SevenSeg/BCDTo7Seg/seg_3> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SevenSeg/BCDTo7Seg/seg_2> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SevenSeg/BCDTo7Seg/seg_1> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SevenSeg/BCDTo7Seg/seg_0> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SevenSeg/BCDTo7Seg/sseg_3> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SevenSeg/BCDTo7Seg/sseg_2> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SevenSeg/BCDTo7Seg/sseg_1> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SevenSeg/BCDTo7Seg/sseg_0> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 45.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 342
+ Flip-Flops                                            : 342
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main.ngr
+Top Level Output File Name         : main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 30
+
+Cell Usage :
+# BELS                             : 1690
+#      GND                         : 1
+#      INV                         : 67
+#      LUT1                        : 404
+#      LUT2                        : 68
+#      LUT2_L                      : 1
+#      LUT3                        : 71
+#      LUT3_D                      : 2
+#      LUT3_L                      : 1
+#      LUT4                        : 110
+#      LUT4_D                      : 3
+#      LUT4_L                      : 5
+#      MUXCY                       : 534
+#      MUXF5                       : 26
+#      VCC                         : 1
+#      XORCY                       : 396
+# FlipFlops/Latches                : 342
+#      FD                          : 68
+#      FDE                         : 38
+#      FDR                         : 79
+#      FDRE                        : 153
+#      FDS                         : 1
+#      FDSE                        : 3
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 26
+#      IBUF                        : 1
+#      OBUF                        : 25
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                      425  out of    960    44%  
+ Number of Slice Flip Flops:            342  out of   1920    17%  
+ Number of 4 input LUTs:                732  out of   1920    38%  
+ Number of IOs:                          30
+ Number of bonded IOBs:                  27  out of     83    32%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------+------------------------+-------+
+Clock Signal                                  | Clock buffer(FF name)  | Load  |
+----------------------------------------------+------------------------+-------+
+clk                                           | BUFGP                  | 315   |
+controlador_etapa/clockDivider_transmisor/clk1| BUFG                   | 27    |
+----------------------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 8.994ns (Maximum Frequency: 111.189MHz)
+   Minimum input arrival time before clock: 4.442ns
+   Maximum output required time after clock: 4.770ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.994ns (frequency: 111.189MHz)
+  Total number of paths / destination ports: 50633 / 687
+-------------------------------------------------------------------------
+Delay:               8.994ns (Levels of Logic = 33)
+  Source:            controlador_sensor_distancia/contador_10us_1 (FF)
+  Destination:       controlador_sensor_distancia/contador_timeout_30 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: controlador_sensor_distancia/contador_10us_1 to controlador_sensor_distancia/contador_timeout_30
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.514   0.532  controlador_sensor_distancia/contador_10us_1 (controlador_sensor_distancia/contador_10us_1)
+     LUT1:I0->O            1   0.612   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<1>_rt (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<1> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<2> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<3> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<4> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<5> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<6> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<7> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<8> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<9> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<10> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<11> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<12> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<13> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<14> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<15> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<16> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<17> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<18> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<19> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<20> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<21> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<22> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<23> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<23>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<24> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<24>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<25> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<25>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<26> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<26>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<27> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<27>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<28> (controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_cy<28>)
+     XORCY:CI->O           1   0.699   0.509  controlador_sensor_distancia/Madd_old_contador_10us_9_add0000_xor<29> (controlador_sensor_distancia/old_contador_10us_9_add0000<29>)
+     LUT2:I0->O            1   0.612   0.000  controlador_sensor_distancia/Mcompar_trig_cmp_ge0000_lut<9> (controlador_sensor_distancia/Mcompar_trig_cmp_ge0000_lut<9>)
+     MUXCY:S->O            3   0.752   0.481  controlador_sensor_distancia/Mcompar_trig_cmp_ge0000_cy<9> (controlador_sensor_distancia/trig_cmp_ge0000)
+     LUT3:I2->O           62   0.612   1.081  controlador_sensor_distancia/contador_10us_and00001 (controlador_sensor_distancia/contador_10us_and0000)
+     FDRE:R                    0.795          controlador_sensor_distancia/contador_10us_0
+    ----------------------------------------
+    Total                      8.994ns (6.391ns logic, 2.603ns route)
+                                       (71.1% logic, 28.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'controlador_etapa/clockDivider_transmisor/clk1'
+  Clock period: 7.670ns (frequency: 130.376MHz)
+  Total number of paths / destination ports: 4116 / 79
+-------------------------------------------------------------------------
+Delay:               7.670ns (Levels of Logic = 21)
+  Source:            controlador_etapa/transmisor_serial/cont_delay_1 (FF)
+  Destination:       controlador_etapa/transmisor_serial/state (FF)
+  Source Clock:      controlador_etapa/clockDivider_transmisor/clk1 rising
+  Destination Clock: controlador_etapa/clockDivider_transmisor/clk1 rising
+
+  Data Path: controlador_etapa/transmisor_serial/cont_delay_1 to controlador_etapa/transmisor_serial/state
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.514   0.532  controlador_etapa/transmisor_serial/cont_delay_1 (controlador_etapa/transmisor_serial/cont_delay_1)
+     LUT1:I0->O            1   0.612   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<1>_rt (controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<1> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<2> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<3> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<4> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<5> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<6> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<7> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<8> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<9> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<10> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<11> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<12> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_cy<12>)
+     XORCY:CI->O           1   0.699   0.426  controlador_etapa/transmisor_serial/Madd_old_cont_delay_21_add0000_xor<13> (controlador_etapa/transmisor_serial/old_cont_delay_21_add0000<13>)
+     LUT4:I1->O            1   0.612   0.000  controlador_etapa/transmisor_serial/state_not00011_wg_lut<0> (controlador_etapa/transmisor_serial/state_not00011_wg_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  controlador_etapa/transmisor_serial/state_not00011_wg_cy<0> (controlador_etapa/transmisor_serial/state_not00011_wg_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  controlador_etapa/transmisor_serial/state_not00011_wg_cy<1> (controlador_etapa/transmisor_serial/state_not00011_wg_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  controlador_etapa/transmisor_serial/state_not00011_wg_cy<2> (controlador_etapa/transmisor_serial/state_not00011_wg_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  controlador_etapa/transmisor_serial/state_not00011_wg_cy<3> (controlador_etapa/transmisor_serial/state_not00011_wg_cy<3>)
+     MUXCY:CI->O          20   0.289   1.006  controlador_etapa/transmisor_serial/state_not00011_wg_cy<4> (controlador_etapa/transmisor_serial/cont_delay_and0000)
+     LUT2:I1->O            1   0.612   0.357  controlador_etapa/transmisor_serial/state_not00011 (controlador_etapa/transmisor_serial/state_not0001)
+     FDE:CE                    0.483          controlador_etapa/transmisor_serial/state
+    ----------------------------------------
+    Total                      7.670ns (5.349ns logic, 2.321ns route)
+                                       (69.7% logic, 30.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 56 / 55
+-------------------------------------------------------------------------
+Offset:              4.442ns (Levels of Logic = 4)
+  Source:            echo (PAD)
+  Destination:       controlador_sensor_distancia/state_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: echo to controlador_sensor_distancia/state_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            26   1.106   1.140  echo_IBUF (echo_IBUF)
+     LUT2:I1->O            1   0.612   0.426  controlador_sensor_distancia/state_mux0002<0>1_SW0 (N88)
+     LUT4:I1->O            1   0.612   0.000  controlador_sensor_distancia/Mmux_state_mux0000_2_f5_G (N92)
+     MUXF5:I1->O           1   0.278   0.000  controlador_sensor_distancia/Mmux_state_mux0000_2_f5 (controlador_sensor_distancia/state_mux0000<0>)
+     FD:D                      0.268          controlador_sensor_distancia/state_1
+    ----------------------------------------
+    Total                      4.442ns (2.876ns logic, 1.566ns route)
+                                       (64.7% logic, 35.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              4.770ns (Levels of Logic = 1)
+  Source:            controlador_sensor_distancia/state_0 (FF)
+  Destination:       leds<4> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: controlador_sensor_distancia/state_0 to leds<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              84   0.514   1.087  controlador_sensor_distancia/state_0 (controlador_sensor_distancia/state_0)
+     OBUF:I->O                 3.169          leds_4_OBUF (leds<4>)
+    ----------------------------------------
+    Total                      4.770ns (3.683ns logic, 1.087ns route)
+                                       (77.2% logic, 22.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'controlador_etapa/clockDivider_transmisor/clk1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            controlador_etapa/transmisor_serial/canal_serial (FF)
+  Destination:       canal_serial_transmisor (PAD)
+  Source Clock:      controlador_etapa/clockDivider_transmisor/clk1 rising
+
+  Data Path: controlador_etapa/transmisor_serial/canal_serial to canal_serial_transmisor
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              1   0.514   0.357  controlador_etapa/transmisor_serial/canal_serial (controlador_etapa/transmisor_serial/canal_serial)
+     OBUF:I->O                 3.169          canal_serial_transmisor_OBUF (canal_serial_transmisor)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.57 secs
+ 
+--> 
+
+Total memory usage is 276240 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  185 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

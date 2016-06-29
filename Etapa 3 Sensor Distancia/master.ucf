@@ -100,10 +100,10 @@ NET "servo4" LOC = "B5"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JA4
 NET "servo5" LOC = "C5"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JB3
 #NET "bits<0>" LOC = "B7"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JB4
 
-NET "trig" LOC = "A9"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JC1
-NET "echo" LOC = "B9"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JC2
-#NET "PIO<82>" LOC = "A10" | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JC3
-#NET "PIO<83>" LOC = "C9"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JC4
+NET "canal_serial_receptor" LOC = "A9"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JC1
+NET "canal_serial_transmisor" LOC = "B9"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JC2
+NET "trig" LOC = "A10" | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JC3
+NET "echo" LOC = "C9"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JC4
 
 #NET "PIO<84>" LOC = "C12"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JD1
 #NET "PIO<85>" LOC = "A13"  | DRIVE = 2  | PULLUP ; # Bank = 2, Signal name = JD2

@@ -5,7 +5,9 @@ module main(
 	input sw2,
 	input clk,
 	input echo,
+	input canal_serial_receptor,
 	
+	output canal_serial_transmisor,
 	output servo1,
 	output servo2,
 	output servo3,
@@ -32,10 +34,17 @@ module main(
 		
 		wire [8:0] distancia;
 		assign leds[3:0] = 0;
-		
 		wire [13:0] decimal;
 		
-		wire clk_div;
+		
+		wire [2:0] state;
+		
+		wire [7:0] ang_servo_1;
+		wire [7:0] ang_servo_2;
+		wire [7:0] ang_servo_3;
+		wire [7:0] ang_servo_4;
+		wire [7:0] ang_servo_5;
+		
 		
 		
 		/*
@@ -46,69 +55,59 @@ module main(
 		);
 		*/
 		
-		servo_controller servo_controller1(
+		servo_pwm servo_pwm1 (
+			.pos(ang_servo_1), //8bits
 			.clk(clk),
-			.btn(btn1),
 
-			.pos(pos1),
 			.servo_pulse(servo1)
 		);
-
-		servo_controller servo_controller2(
+		servo_pwm servo_pwm2(
+			.pos(ang_servo_2), //8bits
 			.clk(clk),
-			.btn(btn2),
 
-			.pos(pos2),
 			.servo_pulse(servo2)
 		);
-
-		servo_controller servo_controller3(
+		servo_pwm servo_pwm3 (
+			.pos(ang_servo_3), //8bits
 			.clk(clk),
-			.btn(btn3),
-			
-			.pos(pos3),
+
 			.servo_pulse(servo3)
 		);
-
-		servo_controller servo_controller4(
+		servo_pwm servo_pwm4 (
+			.pos(ang_servo_4), //8bits
 			.clk(clk),
-			.btn(btn4),
 
-			.pos(pos4),
 			.servo_pulse(servo4)
 		);
+		servo_pwm servo_pwm5 (
+			.pos(ang_servo_5), //8bits
+			.clk(clk),
 
-		servo_controller servo_controller5(
-			.clk(clk),
-			.btn(btn5),
-			
-			.pos(pos5),
 			.servo_pulse(servo5)
-		);
-		
-		serial_mov serial_mov(
-			.sw(sw),
-			.clk(clk),
-			.pos1(pos1),
-			.pos2(pos2),
-			.pos3(pos3),
-			.pos4(pos4),
-			.pos5(pos5),
-			
-			.btn1(btn1),
-			.btn2(btn2),
-			.btn3(btn3),
-			.btn4(btn4),
-			.btn5(btn5)
 		);
 		
 		controlador_sensor_distancia controlador_sensor_distancia(
 			.echo(echo),
 			.clk(clk),
 			
+			.distancia(distancia),
 			.trig(trig),
-			.state(leds[5:4]),
-			.decimal(decimal)
+			.state(leds[5:4])
+			//.decimal(decimal)
+		);
+		
+		controlador_etapa controlador_etapa(
+			.distancia(distancia),
+			.clk(clk),
+			.canal_serial_receptor(canal_serial_receptor),
+			
+			.decimal(decimal),
+			.canal_serial_transmisor(canal_serial_transmisor),
+			.ang_servo_1(ang_servo_1),
+			.ang_servo_2(ang_servo_2),
+			.ang_servo_3(ang_servo_3),
+			.ang_servo_4(ang_servo_4),
+			.ang_servo_5(ang_servo_5)
 		);
 		
 		
@@ -120,10 +119,6 @@ module main(
 			.seg(seg)
 			);
 		
-		clockDivider clockDivider(
-			.clock(clk),
-			.clk(clk_div)
-			);
 
 
 endmodule

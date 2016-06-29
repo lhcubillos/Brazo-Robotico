@@ -8,6 +8,48 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ/SevenSeg.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ/bcd.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ/btn_clk_divider.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ/btn_controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ/clockDivider.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ/contador_8bits.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ/coords_controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ/debouncer.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ/debouncers.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ/main.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ/receptor_serial.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ/servo_controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ/servo_pwm.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ/seven_seg.v&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ/transmisor_serial.v&quot; into library work</arg>
 </msg>
 
