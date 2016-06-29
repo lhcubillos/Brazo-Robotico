@@ -1,5 +1,5 @@
 module servo_controller(
-	input clk, //25 MHz
+	input clk, 
 	input [1:0] btn,
 
 	output [7:0] pos,

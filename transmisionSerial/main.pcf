@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Jun 28 12:43:51 2016
+// Written by: Map P.20131013 on Tue Jun 28 13:28:06 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -24,8 +24,8 @@ COMP "seg<4>" LOCATE = SITE "P12" LEVEL 1;
 COMP "seg<5>" LOCATE = SITE "L13" LEVEL 1;
 COMP "seg<6>" LOCATE = SITE "M12" LEVEL 1;
 COMP "seg<7>" LOCATE = SITE "N13" LEVEL 1;
-COMP "canal_serial" LOCATE = SITE "B2" LEVEL 1;
-COMP "canal_serial_transmision" LOCATE = SITE "A3" LEVEL 1;
+COMP "canal_serial" LOCATE = SITE "A9" LEVEL 1;
+COMP "canal_serial_transmision" LOCATE = SITE "B9" LEVEL 1;
 NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
 SCHEMATIC END;
 

@@ -1,7 +1,7 @@
 #Release 14.7 - par P.20131013 (nt64)
 #Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-#Tue Jun 28 12:44:03 2016
+#Tue Jun 28 13:28:17 2016
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -21,27 +21,27 @@
 Pin Number,Signal Name,Pin Usage,Pin Name,Direction,IO Standard,IO Bank Number,Drive (mA),Slew Rate,Termination,IOB Delay,Voltage,Constraint,IO Register,Signal Integrity,
 A1,,,PROG_B,,,,,,,,,,,,
 A2,,,TDI,,,,,,,,,,,,
-A3,canal_serial_transmision,IOB,IO_L11P_0,OUTPUT,LVCMOS25*,0,2,SLOW,PULLUP,,,LOCATED,NO,NONE,
+A3,,DIFFM,IO_L11P_0,UNUSED,,0,,,,,,,,,
 A4,,,NC,,,,,,,,,,,,
 A5,,,VCCAUX,,,,,,,,2.5,,,,
 A6,,,VCCO_0,,,0,,,,,2.50,,,,
 A7,,DIFFM,IO_L07P_0/GCLK10,UNUSED,,0,,,,,,,,,
 A8,,,GND,,,,,,,,,,,,
-A9,,DIFFS,IO_L05N_0/GCLK7,UNUSED,,0,,,,,,,,,
+A9,canal_serial,IBUF,IO_L05N_0/GCLK7,INPUT,LVCMOS25*,0,,,PULLUP,NONE,,LOCATED,NO,NONE,
 A10,,DIFFM,IO_L04P_0/GCLK4,UNUSED,,0,,,,,,,,,
 A11,,,VCCINT,,,,,,,,1.2,,,,
 A12,,,NC,,,,,,,,,,,,
 A13,,DIFFM,IO_L01P_0,UNUSED,,0,,,,,,,,,
 A14,,,TDO,,,,,,,,,,,,
 B1,,DIFFS,IO_L01N_3,UNUSED,,3,,,,,,,,,
-B2,canal_serial,IBUF,IO_L01P_3,INPUT,LVCMOS25*,3,,,PULLUP,NONE,,LOCATED,NO,NONE,
+B2,,DIFFM,IO_L01P_3,UNUSED,,3,,,,,,,,,
 B3,,DIFFS,IO_L11N_0/HSWAP,UNUSED,,0,,,,,,,,,
 B4,,IBUF,IP,UNUSED,,0,,,,,,,,,
 B5,,DIFFM,IO_L09P_0,UNUSED,,0,,,,,,,,,
 B6,,DIFFM,IO_L08P_0,UNUSED,,0,,,,,,,,,
 B7,,DIFFS,IO_L07N_0/GCLK11,UNUSED,,0,,,,,,,,,
 B8,clk,IBUF,IP_L06P_0/GCLK8,INPUT,LVCMOS25*,0,,,,NONE,,LOCATED,NO,NONE,
-B9,,DIFFM,IO_L05P_0/GCLK6,UNUSED,,0,,,,,,,,,
+B9,canal_serial_transmision,IOB,IO_L05P_0/GCLK6,OUTPUT,LVCMOS25*,0,2,SLOW,PULLUP,,,LOCATED,NO,NONE,
 B10,,,VCCO_0,,,0,,,,,2.50,,,,
 B11,,,NC,,,,,,,,,,,,
 B12,,,NC,,,,,,,,,,,,

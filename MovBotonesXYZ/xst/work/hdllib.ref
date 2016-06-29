@@ -1,0 +1,13 @@
+MO seven_seg NULL seven_seg.v vlg6F/seven__seg.bin 1467171982
+MO transmisor_serial NULL transmisor_serial.v vlg19/transmisor__serial.bin 1467171982
+MO contador_8bits NULL contador_8bits.v vlg6B/contador__8bits.bin 1467171982
+MO SevenSeg NULL SevenSeg.v vlg58/_seven_seg.bin 1467171982
+MO main NULL main.v vlg2D/main.bin 1467171982
+MO debouncers NULL debouncers.v vlg02/debouncers.bin 1467171982
+MO bcd NULL bcd.v vlg65/bcd.bin 1467171982
+MO debouncer NULL debouncer.v vlg03/debouncer.bin 1467171982
+MO btn_clk_divider NULL btn_clk_divider.v vlg77/btn__clk__divider.bin 1467171982
+MO coords_controller NULL coords_controller.v vlg4D/coords__controller.bin 1467171982
+MO receptor_serial NULL receptor_serial.v vlg53/receptor__serial.bin 1467171982
+MO servo_pwm NULL servo_pwm.v vlg56/servo__pwm.bin 1467171982
+MO clockDivider NULL clockDivider.v vlg4B/clock_divider.bin 1467171982

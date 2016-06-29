@@ -1,0 +1,1014 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "seven_seg.v" in library work
+Compiling verilog file "debouncer.v" in library work
+Module <seven_seg> compiled
+Compiling verilog file "contador_8bits.v" in library work
+Module <debouncer> compiled
+Compiling verilog file "btn_clk_divider.v" in library work
+Module <contador_8bits> compiled
+Compiling verilog file "bcd.v" in library work
+Module <btn_clk_divider> compiled
+Compiling verilog file "transmisor_serial.v" in library work
+Module <bcd> compiled
+Compiling verilog file "SevenSeg.v" in library work
+Module <transmisor_serial> compiled
+Compiling verilog file "servo_pwm.v" in library work
+Module <SevenSeg> compiled
+Compiling verilog file "receptor_serial.v" in library work
+Module <servo_pwm> compiled
+Compiling verilog file "debouncers.v" in library work
+Module <receptor_serial> compiled
+Compiling verilog file "coords_controller.v" in library work
+Module <debouncers> compiled
+Compiling verilog file "clockDivider.v" in library work
+Module <coords_controller> compiled
+Compiling verilog file "main.v" in library work
+Module <clockDivider> compiled
+Module <main> compiled
+No errors in compilation
+Analysis of file <"main.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <main> in library <work>.
+
+Analyzing hierarchy for module <SevenSeg> in library <work>.
+
+Analyzing hierarchy for module <debouncers> in library <work>.
+
+Analyzing hierarchy for module <coords_controller> in library <work> with parameters.
+	uno = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <receptor_serial> in library <work> with parameters.
+	HOLA = "010"
+	LEVELING_CLOCK = "011"
+	RECEIVING = "001"
+	STAND_BY = "000"
+	ciclo = "00000000000000000000000000001010"
+	nivelacion = "00000000000000000000000000001110"
+	num_datos = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <transmisor_serial> in library <work> with parameters.
+	IDLE = "0"
+	TR = "1"
+
+Analyzing hierarchy for module <clockDivider> in library <work>.
+
+Analyzing hierarchy for module <servo_pwm> in library <work> with parameters.
+	ClkDiv = "00000000000000000000000011000011"
+	init = "000010010110"
+
+Analyzing hierarchy for module <bcd> in library <work>.
+
+Analyzing hierarchy for module <seven_seg> in library <work>.
+
+Analyzing hierarchy for module <debouncer> in library <work>.
+
+Analyzing hierarchy for module <btn_clk_divider> in library <work> with parameters.
+	cfinal = "00000000000001011111010111100001"
+
+Analyzing hierarchy for module <contador_8bits> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <main>.
+Module <main> is correct for synthesis.
+ 
+Analyzing module <SevenSeg> in library <work>.
+Module <SevenSeg> is correct for synthesis.
+ 
+Analyzing module <bcd> in library <work>.
+Module <bcd> is correct for synthesis.
+ 
+Analyzing module <seven_seg> in library <work>.
+Module <seven_seg> is correct for synthesis.
+ 
+Analyzing module <debouncers> in library <work>.
+Module <debouncers> is correct for synthesis.
+ 
+Analyzing module <debouncer> in library <work>.
+Module <debouncer> is correct for synthesis.
+ 
+Analyzing module <coords_controller> in library <work>.
+	uno = 32'sb00000000000000000000000000000001
+Module <coords_controller> is correct for synthesis.
+ 
+Analyzing module <btn_clk_divider> in library <work>.
+	cfinal = 32'sb00000000000001011111010111100001
+Module <btn_clk_divider> is correct for synthesis.
+ 
+Analyzing module <contador_8bits> in library <work>.
+Module <contador_8bits> is correct for synthesis.
+ 
+Analyzing module <receptor_serial> in library <work>.
+	HOLA = 3'b010
+	LEVELING_CLOCK = 3'b011
+	RECEIVING = 3'b001
+	STAND_BY = 3'b000
+	ciclo = 32'sb00000000000000000000000000001010
+	nivelacion = 32'sb00000000000000000000000000001110
+	num_datos = 32'sb00000000000000000000000000001000
+INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Module <receptor_serial> is correct for synthesis.
+ 
+Analyzing module <transmisor_serial> in library <work>.
+	IDLE = 1'b0
+	TR = 1'b1
+INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Module <transmisor_serial> is correct for synthesis.
+ 
+Analyzing module <clockDivider> in library <work>.
+Module <clockDivider> is correct for synthesis.
+ 
+Analyzing module <servo_pwm> in library <work>.
+	ClkDiv = 32'sb00000000000000000000000011000011
+	init = 12'b000010010110
+Module <servo_pwm> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <receptor_serial>.
+    Related source file is "receptor_serial.v".
+WARNING:Xst:1305 - Output <decimal> is never assigned. Tied to value 00000000000000.
+WARNING:Xst:1780 - Signal <inicio_transmision> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <data4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <data3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <data2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <data1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <data<31:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 3-bit register for signal <state>.
+    Found 8-bit register for signal <angulo_servo_1>.
+    Found 8-bit register for signal <angulo_servo_2>.
+    Found 8-bit register for signal <angulo_servo_3>.
+    Found 8-bit register for signal <angulo_servo_4>.
+    Found 6-bit register for signal <cont_50>.
+    Found 6-bit adder for signal <cont_50$addsub0000> created at line 116.
+    Found 6-bit up counter for signal <cont_data>.
+    Found 7-bit up counter for signal <cont_nivelacion>.
+    Found 2-bit up counter for signal <cont_servo>.
+    Found 32-bit register for signal <data>.
+    Found 1-bit register for signal <listo>.
+    Found 6-bit comparator greatequal for signal <listo$cmp_ge0000> created at line 111.
+    Summary:
+	inferred   3 Counter(s).
+	inferred  74 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <receptor_serial> synthesized.
+
+
+Synthesizing Unit <transmisor_serial>.
+    Related source file is "transmisor_serial.v".
+    Found 1-bit register for signal <canal_serial>.
+    Found 1-bit 30-to-1 multiplexer for signal <$varindex0000> created at line 55.
+    Found 6-bit up counter for signal <cont_data>.
+    Found 19-bit up counter for signal <cont_delay>.
+    Found 6-bit adder for signal <old_cont_data_12$add0000> created at line 56.
+    Found 19-bit adder for signal <old_cont_delay_13$add0000> created at line 65.
+    Found 1-bit register for signal <state>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <transmisor_serial> synthesized.
+
+
+Synthesizing Unit <clockDivider>.
+    Related source file is "clockDivider.v".
+    Found 1-bit register for signal <clk>.
+    Found 26-bit up counter for signal <count>.
+    Found 26-bit comparator equal for signal <count$cmp_eq0000> created at line 35.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <clockDivider> synthesized.
+
+
+Synthesizing Unit <servo_pwm>.
+    Related source file is "servo_pwm.v".
+WARNING:Xst:646 - Signal <count> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit register for signal <servo_pulse>.
+    Found 8-bit up counter for signal <ClkCount>.
+    Found 1-bit register for signal <ClkTick>.
+    Found 12-bit adder for signal <old_count_14$addsub0000> created at line 34.
+    Found 13-bit up counter for signal <PulseCount>.
+    Found 13-bit comparator less for signal <servo_pulse$cmp_lt0000> created at line 35.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <servo_pwm> synthesized.
+
+
+Synthesizing Unit <bcd>.
+    Related source file is "bcd.v".
+WARNING:Xst:646 - Signal <memreg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit adder for signal <$add0000> created at line 45.
+    Found 4-bit adder for signal <$add0001> created at line 45.
+    Found 4-bit adder for signal <$add0002> created at line 45.
+    Found 4-bit adder for signal <$add0003> created at line 41.
+    Found 4-bit adder for signal <$add0004> created at line 45.
+    Found 4-bit adder for signal <$add0005> created at line 41.
+    Found 4-bit adder for signal <$add0006> created at line 45.
+    Found 4-bit adder for signal <$add0007> created at line 41.
+    Found 4-bit adder for signal <$add0008> created at line 45.
+    Found 4-bit adder for signal <$add0009> created at line 37.
+    Found 4-bit adder for signal <$add0010> created at line 41.
+    Found 4-bit adder for signal <$add0011> created at line 45.
+    Found 4-bit adder for signal <$add0012> created at line 37.
+    Found 4-bit adder for signal <$add0013> created at line 41.
+    Found 4-bit adder for signal <$add0014> created at line 45.
+    Found 4-bit adder for signal <$add0015> created at line 37.
+    Found 4-bit adder for signal <$add0016> created at line 41.
+    Found 4-bit adder for signal <$add0017> created at line 45.
+    Found 4-bit adder for signal <$add0018> created at line 33.
+    Found 4-bit adder for signal <$add0019> created at line 37.
+    Found 4-bit adder for signal <$add0020> created at line 41.
+    Found 4-bit adder for signal <$add0021> created at line 45.
+    Found 4-bit adder for signal <$add0022> created at line 33.
+    Found 4-bit adder for signal <$add0023> created at line 37.
+    Found 4-bit adder for signal <$add0024> created at line 41.
+    Found 4-bit adder for signal <$add0025> created at line 45.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0000> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0001> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0002> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0003> created at line 40.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0004> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0005> created at line 40.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0006> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0007> created at line 40.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0008> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0009> created at line 36.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0010> created at line 40.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0011> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0012> created at line 36.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0013> created at line 40.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0014> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0015> created at line 36.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0016> created at line 40.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0017> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0018> created at line 32.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0019> created at line 36.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0020> created at line 40.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0021> created at line 44.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0022> created at line 32.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0023> created at line 36.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0024> created at line 40.
+    Found 4-bit comparator greater for signal <memreg$cmp_gt0025> created at line 44.
+    Summary:
+	inferred  26 Adder/Subtractor(s).
+	inferred  26 Comparator(s).
+Unit <bcd> synthesized.
+
+
+Synthesizing Unit <seven_seg>.
+    Related source file is "seven_seg.v".
+    Found 16x8-bit ROM for signal <seg$mux0001>.
+    Found 8-bit register for signal <seg>.
+    Found 4-bit register for signal <an_temp>.
+    Found 16-bit comparator greatequal for signal <an_temp$cmp_ge0000> created at line 29.
+    Found 16-bit up counter for signal <disp_ctr>.
+    Found 16-bit comparator lessequal for signal <old_sseg_10$cmp_le0000> created at line 32.
+    Found 16-bit comparator lessequal for signal <old_sseg_10$cmp_le0001> created at line 35.
+    Found 16-bit comparator lessequal for signal <old_sseg_10$cmp_le0002> created at line 38.
+    Found 7-bit register for signal <sseg>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <seven_seg> synthesized.
+
+
+Synthesizing Unit <debouncer>.
+    Related source file is "debouncer.v".
+    Found 1-bit register for signal <PB_state>.
+    Found 16-bit up counter for signal <PB_cnt>.
+    Found 1-bit xor2 for signal <PB_cnt$xor0000> created at line 33.
+    Found 1-bit register for signal <PB_sync_0>.
+    Found 1-bit register for signal <PB_sync_1>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   3 D-type flip-flop(s).
+Unit <debouncer> synthesized.
+
+
+Synthesizing Unit <btn_clk_divider>.
+    Related source file is "btn_clk_divider.v".
+    Found 1-bit register for signal <out>.
+    Found 19-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <btn_clk_divider> synthesized.
+
+
+Synthesizing Unit <contador_8bits>.
+    Related source file is "contador_8bits.v".
+    Found 8-bit updown counter for signal <pos>.
+    Found 8-bit comparator greater for signal <pos$cmp_gt0000> created at line 17.
+    Found 8-bit comparator less for signal <pos$cmp_lt0000> created at line 14.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 Comparator(s).
+Unit <contador_8bits> synthesized.
+
+
+Synthesizing Unit <SevenSeg>.
+    Related source file is "SevenSeg.v".
+Unit <SevenSeg> synthesized.
+
+
+Synthesizing Unit <debouncers>.
+    Related source file is "debouncers.v".
+Unit <debouncers> synthesized.
+
+
+Synthesizing Unit <coords_controller>.
+    Related source file is "coords_controller.v".
+Unit <coords_controller> synthesized.
+
+
+Synthesizing Unit <main>.
+    Related source file is "main.v".
+WARNING:Xst:646 - Signal <pos_out> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <main> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Adders/Subtractors                                   : 38
+ 12-bit adder                                          : 8
+ 16-bit adder                                          : 1
+ 19-bit adder                                          : 1
+ 4-bit adder                                           : 26
+ 6-bit adder                                           : 2
+# Counters                                             : 23
+ 13-bit up counter                                     : 4
+ 16-bit up counter                                     : 3
+ 19-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+ 26-bit up counter                                     : 2
+ 6-bit up counter                                      : 2
+ 7-bit up counter                                      : 1
+ 8-bit up counter                                      : 4
+ 8-bit updown counter                                  : 4
+# Registers                                            : 61
+ 1-bit register                                        : 48
+ 3-bit register                                        : 1
+ 4-bit register                                        : 1
+ 6-bit register                                        : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 9
+# Comparators                                          : 45
+ 13-bit comparator less                                : 4
+ 16-bit comparator greatequal                          : 1
+ 16-bit comparator lessequal                           : 3
+ 26-bit comparator equal                               : 2
+ 4-bit comparator greater                              : 26
+ 6-bit comparator greatequal                           : 1
+ 8-bit comparator greater                              : 4
+ 8-bit comparator less                                 : 4
+# Multiplexers                                         : 1
+ 1-bit 30-to-1 multiplexer                             : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <contG> is unconnected in block <coords_controller>.
+   It will be removed from the design.
+INFO:Xst:2261 - The FF/Latch <servo_pulse_1> in Unit <servo_1> is equivalent to the following 6 FFs/Latches, which will be removed : <servo_pulse_2> <servo_pulse_3> <servo_pulse_4> <servo_pulse_5> <servo_pulse_6> <servo_pulse_7> 
+INFO:Xst:2261 - The FF/Latch <servo_pulse_1> in Unit <servo_2> is equivalent to the following 6 FFs/Latches, which will be removed : <servo_pulse_2> <servo_pulse_3> <servo_pulse_4> <servo_pulse_5> <servo_pulse_6> <servo_pulse_7> 
+INFO:Xst:2261 - The FF/Latch <servo_pulse_1> in Unit <servo_3> is equivalent to the following 6 FFs/Latches, which will be removed : <servo_pulse_2> <servo_pulse_3> <servo_pulse_4> <servo_pulse_5> <servo_pulse_6> <servo_pulse_7> 
+INFO:Xst:2261 - The FF/Latch <servo_pulse_1> in Unit <servo_4> is equivalent to the following 6 FFs/Latches, which will be removed : <servo_pulse_2> <servo_pulse_3> <servo_pulse_4> <servo_pulse_5> <servo_pulse_6> <servo_pulse_7> 
+WARNING:Xst:1710 - FF/Latch <sseg_4> (without init value) has a constant value of 0 in block <BCDTo7Seg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sseg_5> (without init value) has a constant value of 0 in block <BCDTo7Seg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sseg_6> (without init value) has a constant value of 0 in block <BCDTo7Seg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <state_2> has a constant value of 0 in block <receptor_serial>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <servo_pulse_1> of sequential type is unconnected in block <servo_1>.
+WARNING:Xst:2677 - Node <servo_pulse_1> of sequential type is unconnected in block <servo_2>.
+WARNING:Xst:2677 - Node <servo_pulse_1> of sequential type is unconnected in block <servo_3>.
+WARNING:Xst:2677 - Node <servo_pulse_1> of sequential type is unconnected in block <servo_4>.
+WARNING:Xst:2404 -  FFs/Latches <servo_pulse<7:1>> (without init value) have a constant value of 0 in block <servo_pwm>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Adders/Subtractors                                   : 38
+ 12-bit adder                                          : 8
+ 16-bit adder                                          : 1
+ 19-bit adder                                          : 1
+ 3-bit adder                                           : 2
+ 4-bit adder                                           : 24
+ 6-bit adder                                           : 2
+# Counters                                             : 23
+ 13-bit up counter                                     : 4
+ 16-bit up counter                                     : 3
+ 19-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+ 26-bit up counter                                     : 2
+ 6-bit up counter                                      : 2
+ 7-bit up counter                                      : 1
+ 8-bit up counter                                      : 4
+ 8-bit updown counter                                  : 4
+# Registers                                            : 88
+ Flip-Flops                                            : 88
+# Comparators                                          : 45
+ 13-bit comparator less                                : 4
+ 16-bit comparator greatequal                          : 1
+ 16-bit comparator lessequal                           : 3
+ 26-bit comparator equal                               : 2
+ 4-bit comparator greater                              : 26
+ 6-bit comparator greatequal                           : 1
+ 8-bit comparator greater                              : 4
+ 8-bit comparator less                                 : 4
+# Multiplexers                                         : 1
+ 1-bit 30-to-1 multiplexer                             : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <state_2> has a constant value of 0 in block <receptor_serial>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sseg_4> (without init value) has a constant value of 0 in block <seven_seg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sseg_5> (without init value) has a constant value of 0 in block <seven_seg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sseg_6> (without init value) has a constant value of 0 in block <seven_seg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <seg_7> (without init value) has a constant value of 1 in block <seven_seg>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <main> ...
+
+Optimizing unit <receptor_serial> ...
+
+Optimizing unit <transmisor_serial> ...
+
+Optimizing unit <servo_pwm> ...
+
+Optimizing unit <bcd> ...
+
+Optimizing unit <seven_seg> ...
+
+Optimizing unit <debouncer> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 40.
+
+Final Macro Processing ...
+
+Processing Unit <main> :
+	Found 2-bit shift register for signal <debounce/debouncer0/PB_sync_1>.
+	Found 2-bit shift register for signal <debounce/debouncer1/PB_sync_1>.
+Unit <main> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 346
+ Flip-Flops                                            : 346
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main.ngr
+Top Level Output File Name         : main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 30
+
+Cell Usage :
+# BELS                             : 1356
+#      GND                         : 1
+#      INV                         : 37
+#      LUT1                        : 248
+#      LUT2                        : 93
+#      LUT2_L                      : 1
+#      LUT3                        : 78
+#      LUT3_L                      : 1
+#      LUT4                        : 207
+#      LUT4_D                      : 4
+#      LUT4_L                      : 1
+#      MUXCY                       : 368
+#      MUXF5                       : 33
+#      MUXF6                       : 2
+#      VCC                         : 1
+#      XORCY                       : 281
+# FlipFlops/Latches                : 348
+#      FD                          : 35
+#      FDE                         : 80
+#      FDR                         : 139
+#      FDRE                        : 84
+#      FDS                         : 7
+#      FDSE                        : 3
+# Shift Registers                  : 2
+#      SRL16                       : 2
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 28
+#      IBUF                        : 8
+#      OBUF                        : 20
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                      358  out of    960    37%  
+ Number of Slice Flip Flops:            348  out of   1920    18%  
+ Number of 4 input LUTs:                672  out of   1920    35%  
+    Number used as logic:               670
+    Number used as Shift registers:       2
+ Number of IOs:                          30
+ Number of bonded IOBs:                  29  out of     83    34%  
+ Number of GCLKs:                         4  out of     24    16%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------+------------------------+-------+
+Clock Signal                           | Clock buffer(FF name)  | Load  |
+---------------------------------------+------------------------+-------+
+clk                                    | BUFGP                  | 235   |
+coords_controller/btn_clk_dividerP/out1| BUFG                   | 24    |
+clockDivider_receptor/clk1             | BUFG                   | 64    |
+clockDivider_transmisor/clk1           | BUFG                   | 27    |
+---------------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 9.905ns (Maximum Frequency: 100.960MHz)
+   Minimum input arrival time before clock: 13.002ns
+   Maximum output required time after clock: 4.591ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.905ns (frequency: 100.960MHz)
+  Total number of paths / destination ports: 34126 / 485
+-------------------------------------------------------------------------
+Delay:               9.905ns (Levels of Logic = 22)
+  Source:            SevenSeg/BCDTo7Seg/disp_ctr_1 (FF)
+  Destination:       SevenSeg/BCDTo7Seg/seg_6 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: SevenSeg/BCDTo7Seg/disp_ctr_1 to SevenSeg/BCDTo7Seg/seg_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.514   0.532  SevenSeg/BCDTo7Seg/disp_ctr_1 (SevenSeg/BCDTo7Seg/disp_ctr_1)
+     LUT1:I0->O            1   0.612   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<1>_rt (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<1> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<2> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<3> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<4> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<5> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<6> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<7> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<8> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<9> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<10> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<11> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<12> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<13> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<13>)
+     MUXCY:CI->O           0   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<14> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_cy<14>)
+     XORCY:CI->O           4   0.699   0.651  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_9_xor<15> (SevenSeg/BCDTo7Seg/_old_disp_ctr_9<15>)
+     LUT1:I0->O            1   0.612   0.000  SevenSeg/BCDTo7Seg/Mcompar_old_sseg_10_cmp_le0000_cy<7>_rt (SevenSeg/BCDTo7Seg/Mcompar_old_sseg_10_cmp_le0000_cy<7>_rt)
+     MUXCY:S->O            5   0.752   0.607  SevenSeg/BCDTo7Seg/Mcompar_old_sseg_10_cmp_le0000_cy<7> (SevenSeg/BCDTo7Seg/old_sseg_10_cmp_le0002)
+     LUT2_L:I1->LO         1   0.612   0.103  SevenSeg/BCDTo7Seg/_old_sseg_10<1>197 (SevenSeg/BCDTo7Seg/_old_sseg_10<1>197)
+     LUT4:I3->O            1   0.612   0.360  SevenSeg/BCDTo7Seg/_old_sseg_10<1>217 (SevenSeg/BCDTo7Seg/_old_sseg_10<1>217)
+     LUT4:I3->O            8   0.612   0.673  SevenSeg/BCDTo7Seg/_old_sseg_10<1>257 (SevenSeg/BCDTo7Seg/_old_sseg_10<1>)
+     LUT4:I2->O            1   0.612   0.000  SevenSeg/BCDTo7Seg/Mrom_seg_mux0001111 (SevenSeg/BCDTo7Seg/Mrom_seg_mux00011)
+     FD:D                      0.268          SevenSeg/BCDTo7Seg/seg_1
+    ----------------------------------------
+    Total                      9.905ns (6.979ns logic, 2.926ns route)
+                                       (70.5% logic, 29.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'coords_controller/btn_clk_dividerP/out1'
+  Clock period: 5.830ns (frequency: 171.530MHz)
+  Total number of paths / destination ports: 1632 / 48
+-------------------------------------------------------------------------
+Delay:               5.830ns (Levels of Logic = 11)
+  Source:            coords_controller/contX/pos_2 (FF)
+  Destination:       coords_controller/contX/pos_7 (FF)
+  Source Clock:      coords_controller/btn_clk_dividerP/out1 rising
+  Destination Clock: coords_controller/btn_clk_dividerP/out1 rising
+
+  Data Path: coords_controller/contX/pos_2 to coords_controller/contX/pos_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.514   0.651  coords_controller/contX/pos_2 (coords_controller/contX/pos_2)
+     LUT4:I0->O            2   0.612   0.383  coords_controller/contX/pos_and000025 (coords_controller/contX/pos_and000025)
+     LUT4:I3->O            9   0.612   0.766  coords_controller/contX/pos_and000039 (coords_controller/contX/pos_and0000)
+     LUT2:I1->O            1   0.612   0.000  coords_controller/contX/Mcount_pos_lut<0> (coords_controller/contX/Mcount_pos_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  coords_controller/contX/Mcount_pos_cy<0> (coords_controller/contX/Mcount_pos_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  coords_controller/contX/Mcount_pos_cy<1> (coords_controller/contX/Mcount_pos_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  coords_controller/contX/Mcount_pos_cy<2> (coords_controller/contX/Mcount_pos_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  coords_controller/contX/Mcount_pos_cy<3> (coords_controller/contX/Mcount_pos_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  coords_controller/contX/Mcount_pos_cy<4> (coords_controller/contX/Mcount_pos_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  coords_controller/contX/Mcount_pos_cy<5> (coords_controller/contX/Mcount_pos_cy<5>)
+     MUXCY:CI->O           0   0.051   0.000  coords_controller/contX/Mcount_pos_cy<6> (coords_controller/contX/Mcount_pos_cy<6>)
+     XORCY:CI->O           1   0.699   0.000  coords_controller/contX/Mcount_pos_xor<7> (Result<7>2)
+     FDE:D                     0.268          coords_controller/contX/pos_7
+    ----------------------------------------
+    Total                      5.830ns (4.030ns logic, 1.800ns route)
+                                       (69.1% logic, 30.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockDivider_receptor/clk1'
+  Clock period: 6.298ns (frequency: 158.784MHz)
+  Total number of paths / destination ports: 656 / 123
+-------------------------------------------------------------------------
+Delay:               6.298ns (Levels of Logic = 4)
+  Source:            receptor_serial/cont_50_3 (FF)
+  Destination:       receptor_serial/data_1 (FF)
+  Source Clock:      clockDivider_receptor/clk1 rising
+  Destination Clock: clockDivider_receptor/clk1 rising
+
+  Data Path: receptor_serial/cont_50_3 to receptor_serial/data_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              9   0.514   0.849  receptor_serial/cont_50_3 (receptor_serial/cont_50_3)
+     LUT4:I0->O            1   0.612   0.509  receptor_serial/cont_data_and0000110 (receptor_serial/cont_data_and0000110)
+     LUT4_D:I0->LO         1   0.612   0.252  receptor_serial/cont_data_and0000134 (N100)
+     LUT2:I0->O           12   0.612   0.886  receptor_serial/data_0_and000011 (receptor_serial/cont_data_not0001)
+     LUT4:I1->O            1   0.612   0.357  receptor_serial/data_4_and00001 (receptor_serial/data_4_and0000)
+     FDE:CE                    0.483          receptor_serial/data_4
+    ----------------------------------------
+    Total                      6.298ns (3.445ns logic, 2.853ns route)
+                                       (54.7% logic, 45.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockDivider_transmisor/clk1'
+  Clock period: 7.836ns (frequency: 127.614MHz)
+  Total number of paths / destination ports: 4135 / 79
+-------------------------------------------------------------------------
+Delay:               7.836ns (Levels of Logic = 21)
+  Source:            transmisor_serial/cont_delay_1 (FF)
+  Destination:       transmisor_serial/state (FF)
+  Source Clock:      clockDivider_transmisor/clk1 rising
+  Destination Clock: clockDivider_transmisor/clk1 rising
+
+  Data Path: transmisor_serial/cont_delay_1 to transmisor_serial/state
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.514   0.532  transmisor_serial/cont_delay_1 (transmisor_serial/cont_delay_1)
+     LUT1:I0->O            1   0.612   0.000  transmisor_serial/Madd_old_cont_delay_13_add0000_cy<1>_rt (transmisor_serial/Madd_old_cont_delay_13_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  transmisor_serial/Madd_old_cont_delay_13_add0000_cy<1> (transmisor_serial/Madd_old_cont_delay_13_add0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  transmisor_serial/Madd_old_cont_delay_13_add0000_cy<2> (transmisor_serial/Madd_old_cont_delay_13_add0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  transmisor_serial/Madd_old_cont_delay_13_add0000_cy<3> (transmisor_serial/Madd_old_cont_delay_13_add0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  transmisor_serial/Madd_old_cont_delay_13_add0000_cy<4> (transmisor_serial/Madd_old_cont_delay_13_add0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  transmisor_serial/Madd_old_cont_delay_13_add0000_cy<5> (transmisor_serial/Madd_old_cont_delay_13_add0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  transmisor_serial/Madd_old_cont_delay_13_add0000_cy<6> (transmisor_serial/Madd_old_cont_delay_13_add0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  transmisor_serial/Madd_old_cont_delay_13_add0000_cy<7> (transmisor_serial/Madd_old_cont_delay_13_add0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  transmisor_serial/Madd_old_cont_delay_13_add0000_cy<8> (transmisor_serial/Madd_old_cont_delay_13_add0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  transmisor_serial/Madd_old_cont_delay_13_add0000_cy<9> (transmisor_serial/Madd_old_cont_delay_13_add0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  transmisor_serial/Madd_old_cont_delay_13_add0000_cy<10> (transmisor_serial/Madd_old_cont_delay_13_add0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  transmisor_serial/Madd_old_cont_delay_13_add0000_cy<11> (transmisor_serial/Madd_old_cont_delay_13_add0000_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  transmisor_serial/Madd_old_cont_delay_13_add0000_cy<12> (transmisor_serial/Madd_old_cont_delay_13_add0000_cy<12>)
+     XORCY:CI->O           1   0.699   0.509  transmisor_serial/Madd_old_cont_delay_13_add0000_xor<13> (transmisor_serial/old_cont_delay_13_add0000<13>)
+     LUT4:I0->O            1   0.612   0.000  transmisor_serial/state_not00011_wg_lut<0> (transmisor_serial/state_not00011_wg_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  transmisor_serial/state_not00011_wg_cy<0> (transmisor_serial/state_not00011_wg_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  transmisor_serial/state_not00011_wg_cy<1> (transmisor_serial/state_not00011_wg_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  transmisor_serial/state_not00011_wg_cy<2> (transmisor_serial/state_not00011_wg_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  transmisor_serial/state_not00011_wg_cy<3> (transmisor_serial/state_not00011_wg_cy<3>)
+     MUXCY:CI->O          20   0.289   1.089  transmisor_serial/state_not00011_wg_cy<4> (transmisor_serial/cont_delay_and0000)
+     LUT2:I0->O            1   0.612   0.357  transmisor_serial/state_not00011 (transmisor_serial/state_not0001)
+     FDE:CE                    0.483          transmisor_serial/state
+    ----------------------------------------
+    Total                      7.836ns (5.349ns logic, 2.487ns route)
+                                       (68.3% logic, 31.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'coords_controller/btn_clk_dividerP/out1'
+  Total number of paths / destination ports: 180 / 48
+-------------------------------------------------------------------------
+Offset:              5.296ns (Levels of Logic = 11)
+  Source:            sw<0> (PAD)
+  Destination:       coords_controller/contX/pos_7 (FF)
+  Destination Clock: coords_controller/btn_clk_dividerP/out1 rising
+
+  Data Path: sw<0> to coords_controller/contX/pos_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.106   0.520  sw_0_IBUF (sw_0_IBUF)
+     LUT4:I1->O            9   0.612   0.766  coords_controller/contX/pos_and000039 (coords_controller/contX/pos_and0000)
+     LUT2:I1->O            1   0.612   0.000  coords_controller/contX/Mcount_pos_lut<0> (coords_controller/contX/Mcount_pos_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  coords_controller/contX/Mcount_pos_cy<0> (coords_controller/contX/Mcount_pos_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  coords_controller/contX/Mcount_pos_cy<1> (coords_controller/contX/Mcount_pos_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  coords_controller/contX/Mcount_pos_cy<2> (coords_controller/contX/Mcount_pos_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  coords_controller/contX/Mcount_pos_cy<3> (coords_controller/contX/Mcount_pos_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  coords_controller/contX/Mcount_pos_cy<4> (coords_controller/contX/Mcount_pos_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  coords_controller/contX/Mcount_pos_cy<5> (coords_controller/contX/Mcount_pos_cy<5>)
+     MUXCY:CI->O           0   0.051   0.000  coords_controller/contX/Mcount_pos_cy<6> (coords_controller/contX/Mcount_pos_cy<6>)
+     XORCY:CI->O           1   0.699   0.000  coords_controller/contX/Mcount_pos_xor<7> (Result<7>2)
+     FDE:D                     0.268          coords_controller/contX/pos_7
+    ----------------------------------------
+    Total                      5.296ns (4.010ns logic, 1.286ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clockDivider_receptor/clk1'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              3.689ns (Levels of Logic = 2)
+  Source:            canal_serial_receptor (PAD)
+  Destination:       receptor_serial/state_0 (FF)
+  Destination Clock: clockDivider_receptor/clk1 rising
+
+  Data Path: canal_serial_receptor to receptor_serial/state_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.106   0.819  canal_serial_receptor_IBUF (canal_serial_receptor_IBUF)
+     LUT3:I1->O            1   0.612   0.357  receptor_serial/state_mux0000<2>69 (receptor_serial/state_mux0000<2>69)
+     FDS:S                     0.795          receptor_serial/state_0
+    ----------------------------------------
+    Total                      3.689ns (2.513ns logic, 1.176ns route)
+                                       (68.1% logic, 31.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 14938 / 14
+-------------------------------------------------------------------------
+Offset:              13.002ns (Levels of Logic = 12)
+  Source:            sw<4> (PAD)
+  Destination:       SevenSeg/BCDTo7Seg/seg_6 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sw<4> to SevenSeg/BCDTo7Seg/seg_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.106   1.031  sw_4_IBUF (sw_4_IBUF)
+     LUT3:I0->O            1   0.612   0.000  decimal<7>_F (N83)
+     MUXF5:I0->O          17   0.278   1.045  decimal<7> (decimal<7>)
+     LUT4:I0->O            1   0.612   0.000  SevenSeg/decToBCD/memreg_mux0069_F (N79)
+     MUXF5:I0->O          11   0.278   0.945  SevenSeg/decToBCD/memreg_mux0069 (SevenSeg/decToBCD/Madd__add0021_lut<3>)
+     LUT4:I0->O            1   0.612   0.000  SevenSeg/decToBCD/memreg_mux00842 (SevenSeg/decToBCD/memreg_mux00841)
+     MUXF5:I0->O           6   0.278   0.638  SevenSeg/decToBCD/memreg_mux0084_f5 (SevenSeg/decToBCD/Madd__add0024_cy<0>)
+     LUT4:I1->O            1   0.612   0.509  SevenSeg/BCDTo7Seg/_old_sseg_10<2>83 (SevenSeg/BCDTo7Seg/_old_sseg_10<2>83)
+     LUT4:I0->O            1   0.612   0.509  SevenSeg/BCDTo7Seg/_old_sseg_10<2>121 (SevenSeg/BCDTo7Seg/_old_sseg_10<2>121)
+     LUT4:I0->O            1   0.612   0.426  SevenSeg/BCDTo7Seg/_old_sseg_10<2>203 (SevenSeg/BCDTo7Seg/_old_sseg_10<2>203)
+     LUT4:I1->O            8   0.612   0.795  SevenSeg/BCDTo7Seg/_old_sseg_10<2>255 (SevenSeg/BCDTo7Seg/_old_sseg_10<2>)
+     LUT4:I0->O            1   0.612   0.000  SevenSeg/BCDTo7Seg/Mrom_seg_mux000161 (SevenSeg/BCDTo7Seg/Mrom_seg_mux00016)
+     FD:D                      0.268          SevenSeg/BCDTo7Seg/seg_6
+    ----------------------------------------
+    Total                     13.002ns (7.104ns logic, 5.898ns route)
+                                       (54.6% logic, 45.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clockDivider_transmisor/clk1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            transmisor_serial/canal_serial (FF)
+  Destination:       canal_serial_transmisor (PAD)
+  Source Clock:      clockDivider_transmisor/clk1 rising
+
+  Data Path: transmisor_serial/canal_serial to canal_serial_transmisor
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              1   0.514   0.357  transmisor_serial/canal_serial (transmisor_serial/canal_serial)
+     OBUF:I->O                 3.169          canal_serial_transmisor_OBUF (canal_serial_transmisor)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            servo_1/servo_pulse (FF)
+  Destination:       servo1 (PAD)
+  Source Clock:      clk rising
+
+  Data Path: servo_1/servo_pulse to servo1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.514   0.357  servo_1/servo_pulse (servo_1/servo_pulse)
+     OBUF:I->O                 3.169          servo1_OBUF (servo1)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clockDivider_receptor/clk1'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.591ns (Levels of Logic = 1)
+  Source:            receptor_serial/state_0 (FF)
+  Destination:       leds<0> (PAD)
+  Source Clock:      clockDivider_receptor/clk1 rising
+
+  Data Path: receptor_serial/state_0 to leds<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             18   0.514   0.908  receptor_serial/state_0 (receptor_serial/state_0)
+     OBUF:I->O                 3.169          leds_0_OBUF (leds<0>)
+    ----------------------------------------
+    Total                      4.591ns (3.683ns logic, 0.908ns route)
+                                       (80.2% logic, 19.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.77 secs
+ 
+--> 
+
+Total memory usage is 274448 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   33 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-06-26T17:07:24</DateModified>
+  <DateModified>2016-06-28T21:26:24</DateModified>
   <ModuleName>main</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Vicente/Desktop/Lab Digitales/Brazo-Robotico/Controlado con Botones/iseconfig/main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Vicente/Desktop/Lab Digitales/Brazo-Robotico/Controlado con Botones\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2016-06-28T13:07:19</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ/iseconfig/main.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/MovBotonesXYZ\</ImplementationReportsDirectory>
   <DateInitialized>2016-05-23T16:45:29</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

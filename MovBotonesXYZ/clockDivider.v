@@ -20,21 +20,24 @@
 //////////////////////////////////////////////////////////////////////////////////
 module clockDivider(
     input clock,
+	 input [15:0] constante,
+	 
     output reg clk
     );
 	 
-	reg count;
+	reg [25:0] count;
 	initial count = 0;
+	
+	//parameter constante = 50;
 	 
 	always @(posedge(clock)) begin
 		
-		if (count) begin
+		if (count == constante) begin
 			count <= 0;
 			clk <= ~clk;
 		end
 		else begin
 			count <= count + 1;
-			clk <= clk;
 		end
 	end
 

@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Tue Jun 28 12:43:53 2016">
+<application name="pn" timeStamp="Tue Jun 28 13:28:08 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="A5DE74747BA3432182E1B7B7291FF61C" type="project"/>
-<property name="ProjectIteration" value="112" type="project"/>
+<property name="ProjectIteration" value="113" type="project"/>
 <property name="ProjectFile" value="C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/transmisionSerial/transmisionSerial.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2016-06-26T15:59:13" type="project"/>
 </section>
@@ -25,7 +25,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2016-06-26T15:59:13" type="design"/>
 <property name="PROP_intWbtProjectID" value="A5DE74747BA3432182E1B7B7291FF61C" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="112" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="113" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
