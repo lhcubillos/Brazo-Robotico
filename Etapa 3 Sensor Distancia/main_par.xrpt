@@ -5,7 +5,11 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
+<<<<<<< HEAD
+  <application stringID="par" timeStamp="Wed Jun 29 23:31:01 2016">
+=======
   <application stringID="par" timeStamp="Wed Jun 29 16:20:29 2016">
+>>>>>>> f33ffe9e5053b72e4d9a252a5a0efb0ce7e3301a
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -63,17 +67,30 @@
     </task>
     <task stringID="PAR_DEVICE_UTILIZATION">
       <section stringID="PAR_DESIGN_SUMMARY">
+<<<<<<< HEAD
+        <item AVAILABLE="960" dataType="int" stringID="PAR_SLICES" value="762"></item>
+=======
         <item AVAILABLE="960" dataType="int" stringID="PAR_SLICES" value="476"></item>
+>>>>>>> f33ffe9e5053b72e4d9a252a5a0efb0ce7e3301a
       </section>
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
+<<<<<<< HEAD
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="16 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="15 secs "/>
+        <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
+        <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="16 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="16 secs "/>
+=======
         <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="10 secs "/>
         <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="10 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
         <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="11 secs "/>
         <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="11 secs "/>
+>>>>>>> f33ffe9e5053b72e4d9a252a5a0efb0ce7e3301a
       </section>
     </task>
     <task stringID="PAR_par">
@@ -92,18 +109,38 @@
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X2Y11"/>
             <item label="Locked" stringID="LOCKED" value="No"/>
+<<<<<<< HEAD
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="315.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.028000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.063000"/>
+=======
             <item dataType="float" label="Fanout" stringID="FANOUT" value="216.000000"/>
             <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.031000"/>
             <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.064000"/>
+>>>>>>> f33ffe9e5053b72e4d9a252a5a0efb0ce7e3301a
           </row>
           <row stringID="row" value="2">
             <item label="Clock Net" stringID="CLOCK_NET" value="controlador_etapa/clockDivider_transmisor/clk"/>
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
-            <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X1Y10"/>
+            <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X1Y0"/>
             <item label="Locked" stringID="LOCKED" value="No"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="16.000000"/>
+<<<<<<< HEAD
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.019000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.059000"/>
+          </row>
+          <row stringID="row" value="3">
+            <item label="Clock Net" stringID="CLOCK_NET" value="controlador_etapa/clockDivider_receptor/clk"/>
+            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
+            <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X1Y10"/>
+            <item label="Locked" stringID="LOCKED" value="No"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="40.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.032000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.065000"/>
+=======
             <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.012000"/>
             <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.063000"/>
+>>>>>>> f33ffe9e5053b72e4d9a252a5a0efb0ce7e3301a
           </row>
         </table>
       </section>
@@ -1183,7 +1220,7 @@
       <section stringID="PAR_UNROUTES_REPORT">
         <item dataType="int" stringID="PAR_UNROUTED_NETS" value="0"/>
         <item dataType="int" stringID="PAR_TOTAL_SOURCELESS_NETS" value="0"/>
-        <item dataType="int" stringID="PAR_TOTAL_LOADLESS_NETS" value="3"/>
+        <item dataType="int" stringID="PAR_TOTAL_LOADLESS_NETS" value="2"/>
       </section>
     </task>
   </application>

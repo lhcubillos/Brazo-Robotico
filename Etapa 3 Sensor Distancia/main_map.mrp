@@ -9,13 +9,29 @@ Target Device  : xc3s100e
 Target Package : cp132
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
+<<<<<<< HEAD
+Mapped Date    : Wed Jun 29 23:30:53 2016
+=======
 Mapped Date    : Wed Jun 29 16:20:23 2016
+>>>>>>> f33ffe9e5053b72e4d9a252a5a0efb0ce7e3301a
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   10
+Number of warnings:    9
 Logic Utilization:
+<<<<<<< HEAD
+  Number of Slice Flip Flops:           646 out of   1,920   33%
+  Number of 4 input LUTs:               802 out of   1,920   41%
+Logic Distribution:
+  Number of occupied Slices:            762 out of     960   79%
+    Number of Slices containing only related logic:     762 out of     762 100%
+    Number of Slices containing unrelated logic:          0 out of     762   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       1,325 out of   1,920   69%
+    Number used as logic:               802
+    Number used as a route-thru:        523
+=======
   Number of Slice Flip Flops:           380 out of   1,920   19%
   Number of 4 input LUTs:               477 out of   1,920   24%
 Logic Distribution:
@@ -26,16 +42,23 @@ Logic Distribution:
   Total Number of 4 input LUTs:         892 out of   1,920   46%
     Number used as logic:               477
     Number used as a route-thru:        415
+>>>>>>> f33ffe9e5053b72e4d9a252a5a0efb0ce7e3301a
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
   Number of bonded IOBs:                 32 out of      83   38%
-  Number of BUFGMUXs:                     2 out of      24    8%
+  Number of BUFGMUXs:                     3 out of      24   12%
 
+<<<<<<< HEAD
+Average Fanout of Non-Clock Nets:                2.78
+
+Peak Memory Usage:  315 MB
+=======
 Average Fanout of Non-Clock Nets:                2.68
 
 Peak Memory Usage:  321 MB
+>>>>>>> f33ffe9e5053b72e4d9a252a5a0efb0ce7e3301a
 Total REAL time to MAP completion:  2 secs 
 Total CPU time to MAP completion:   2 secs 
 
@@ -82,8 +105,6 @@ WARNING:PhysDesignRules:367 - The signal <sw_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <sw2_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <canal_serial_receptor_IBUF> is
-   incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp trig is
    set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp servo1 is
@@ -101,10 +122,9 @@ WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network canal_serial_receptor_IBUF has no load.
-INFO:LIT:395 - The above info message is repeated 2 more times for the following
+INFO:LIT:243 - Logical network sw2_IBUF has no load.
+INFO:LIT:395 - The above info message is repeated 1 more times for the following
    (max. 5 shown):
-   sw2_IBUF,
    sw_IBUF
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:564 - The following environment variables are currently set:

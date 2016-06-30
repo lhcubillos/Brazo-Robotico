@@ -44,7 +44,11 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
+<<<<<<< HEAD
+echo        |    3.054(R)|    0.627(R)|clk_BUFGP         |   0.000|
+=======
 echo        |    2.725(R)|    0.322(R)|clk_BUFGP         |   0.000|
+>>>>>>> f33ffe9e5053b72e4d9a252a5a0efb0ce7e3301a
 ------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -52,6 +56,28 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
+<<<<<<< HEAD
+an<0>       |    7.821(R)|clk_BUFGP         |   0.000|
+an<1>       |    7.076(R)|clk_BUFGP         |   0.000|
+an<2>       |    7.151(R)|clk_BUFGP         |   0.000|
+an<3>       |    7.098(R)|clk_BUFGP         |   0.000|
+leds<0>     |    8.904(R)|clk_BUFGP         |   0.000|
+leds<1>     |    9.237(R)|clk_BUFGP         |   0.000|
+leds<2>     |    7.100(R)|clk_BUFGP         |   0.000|
+seg<0>      |    6.917(R)|clk_BUFGP         |   0.000|
+seg<1>      |    7.169(R)|clk_BUFGP         |   0.000|
+seg<2>      |    7.328(R)|clk_BUFGP         |   0.000|
+seg<3>      |    7.136(R)|clk_BUFGP         |   0.000|
+seg<4>      |    7.325(R)|clk_BUFGP         |   0.000|
+seg<5>      |    7.156(R)|clk_BUFGP         |   0.000|
+seg<6>      |    6.869(R)|clk_BUFGP         |   0.000|
+servo1      |   10.980(R)|clk_BUFGP         |   0.000|
+servo2      |   10.314(R)|clk_BUFGP         |   0.000|
+servo3      |   10.531(R)|clk_BUFGP         |   0.000|
+servo4      |   10.250(R)|clk_BUFGP         |   0.000|
+servo5      |   10.058(R)|clk_BUFGP         |   0.000|
+trig        |   10.321(R)|clk_BUFGP         |   0.000|
+=======
 an<0>       |    7.863(R)|clk_BUFGP         |   0.000|
 an<1>       |    6.615(R)|clk_BUFGP         |   0.000|
 an<2>       |    7.187(R)|clk_BUFGP         |   0.000|
@@ -77,6 +103,7 @@ servo3      |   10.531(R)|clk_BUFGP         |   0.000|
 servo4      |   10.825(R)|clk_BUFGP         |   0.000|
 servo5      |   10.058(R)|clk_BUFGP         |   0.000|
 trig        |   10.564(R)|clk_BUFGP         |   0.000|
+>>>>>>> f33ffe9e5053b72e4d9a252a5a0efb0ce7e3301a
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -84,18 +111,30 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
+<<<<<<< HEAD
+clk            |    9.600|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Wed Jun 29 23:31:20 2016 
+=======
 clk            |    9.112|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
 Analysis completed Wed Jun 29 16:20:43 2016 
+>>>>>>> f33ffe9e5053b72e4d9a252a5a0efb0ce7e3301a
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
+<<<<<<< HEAD
+Peak Memory Usage: 174 MB
+=======
 Peak Memory Usage: 165 MB
+>>>>>>> f33ffe9e5053b72e4d9a252a5a0efb0ce7e3301a
 
 
 

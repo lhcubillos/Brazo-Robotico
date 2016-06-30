@@ -1,14 +1,17 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
+<<<<<<< HEAD
+Wed Jun 29 23:31:16 2016
+=======
 Wed Jun 29 16:20:40 2016
+>>>>>>> f33ffe9e5053b72e4d9a252a5a0efb0ce7e3301a
 
 All signals are completely routed.
 
-WARNING:ParHelpers:361 - There are 3 loadless signals in this design. This design will cause Bitgen to issue DRC
+WARNING:ParHelpers:361 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC
    warnings.
 
-   canal_serial_receptor_IBUF
    sw2_IBUF
    sw_IBUF
 

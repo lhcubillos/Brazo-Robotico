@@ -5,12 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">canal_serial_receptor_IBUF</arg> has no load.
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">sw2_IBUF</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">2</arg> more times for the following (max. 5 shown):
-<arg fmt="%s" index="3">sw2_IBUF,
-sw_IBUF</arg>
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">1</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">sw_IBUF</arg>
 To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
 </msg>
 
@@ -27,9 +26,6 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 </msg>
 
 <msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">sw2_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">canal_serial_receptor_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
 <msg type="warning" file="PhysDesignRules" num="781" delta="old" ><arg fmt="%s" index="1">PULLUP</arg> on an active net. <arg fmt="%s" index="2">PULLUP</arg> of comp <arg fmt="%s" index="3">trig</arg> is set but the tri state is not configured. 

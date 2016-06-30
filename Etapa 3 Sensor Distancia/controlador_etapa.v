@@ -39,42 +39,45 @@ module controlador_etapa(
 	 
 	 assign distancia_para_mapear = (distancia >= 5) ?  distancia - 5: 0;
 	 
-	 parameter x5cm = 0, z5cm = 5, x0cm = 0, z0cm = 0, y0cm = 0;
+	 parameter x5cm = 0, z5cm = 110, x0cm = 0, z0cm = 0, y0cm = 0;
 	 
-	 //parameter xpunto = 7, ypunto = 4;
+	 parameter xpunto = 127;
+	 wire [7:0] ypunto;
 	 
-	 parameter tiempo_espera = 395625;
-	 parameter limite_distancia_superior = 12;
-	 parameter limite_distancia_inferior = 5;
+	 parameter tiempo_espera = 1000000;
+	 parameter limite_distancia_superior = 14;
+	 parameter limite_distancia_inferior = 4;
 	 
-	 parameter BUSCANDO_SUBIENDO = 0, BUSCANDO_BAJANDO = 1, PESCANDO_OBJETO = 2, LEVANTANDO_OBJETO = 3,DEJANDO_OBJEETO = 4, IDLE = 5;
+	 parameter BUSCANDO_SUBIENDO = 0, BUSCANDO_BAJANDO = 1, PESCANDO_OBJETO = 2, LEVANTANDO_OBJETO = 3,DEJANDO_OBJETO = 4, IDLE = 5;
 
 	 
 	 //Ver bien qué valores tienen que tener.
 	 reg [7:0] x, y, z;
 	 
-	 assign decimal = x;
 	 
 	 reg [25:0] cont_x, cont_y;
 	 
 	 reg [7:0] cont_angulo_y;
 	 reg [25:0] cont_divider;
 	 assign ang_servo_1 = cont_angulo_y;
-	 assign ang_servo_2 = 128;
-	 assign ang_servo_3 = 128;
-	 assign ang_servo_4 = 128;
+	 assign ang_servo_2 = recepcion_ang_2;
+	 assign ang_servo_3 = recepcion_ang_3;
+	 assign ang_servo_4 = recepcion_ang_4;
 	 assign ang_servo_5 = 128;
 	 
+	 assign ypunto = cont_angulo_y > 128 ? 64 : 192;
 	 
 	 wire clk_div_transmisor;
 	 wire clk_div_receptor;
 	 
 	 reg [3:0] state;
 	 
+	 assign decimal = state;
+	 
 	 initial begin
 		x = 0;
 		y = 0;
-		z = 5;
+		z = 90;
 		
 		state = BUSCANDO_SUBIENDO;
 		
@@ -155,55 +158,59 @@ module controlador_etapa(
 				end
 			end
 			
-//			PESCANDO_OBJETO: begin
-//				//Llegar a (distancia, 0 , 0)
-//				if (cont_x == tiempo_espera) begin
-//					cont_x = 0;
-//					if (x == distancia) begin
-//						if (z == z0cm) begin
-//							//Apretar gripper
-//							state = LEVANTAND0_OBJETO;
-//						end else z = z - 1;
-//					end else x = x + 1;
-//				end else cont_x = cont_x + 1;
-//			end
-//			
-//			LEVANTANDO_OBJETO: begin
-//				//Llegar a (5, 0 , 5)
-//				if (cont_x == tiempo_espera) begin
-//					cont_x = 0;
-//					if (z == z5cm) begin
-//						if (x == x5cm) begin
-//							state = DEJANDO_OBJETO;
-//						end else x = x - 1;
-//					end else z = z + 1;
-//				end else cont_x = cont_x + 1;
-//			end
-//			
-//			DEJANDO_OBJETO: begin
-//				//llegar a otro punto especifico.
-//				if (cont_x == tiempo_espera) begin
-//					if (x == xpunto) begin
-//						if (y == ypunto) begin
+			PESCANDO_OBJETO: begin
+				//Llegar a (distancia, 0 , 0)
+				if (cont_x == tiempo_espera) begin
+					cont_x = 0;
+					if (x == distancia_mapeada) begin
+						if (z == z0cm) begin
+							//Apretar gripper
+							state = LEVANTANDO_OBJETO;
+						end else z = z - 1;
+					end else x = x + 1;
+				end else cont_x = cont_x + 1;
+			end
+			
+			LEVANTANDO_OBJETO: begin
+				//Llegar a (5, 0 , 5)
+				if (cont_x == tiempo_espera) begin
+					cont_x = 0;
+					if (z == z5cm) begin
+						if (x == x5cm) begin
+							state = DEJANDO_OBJETO;
+						end else x = x - 1;
+					end else z = z + 1;
+				end else cont_x = cont_x + 1;
+			end
+			
+			DEJANDO_OBJETO: begin
+				//llegar a otro punto especifico.
+				if (cont_x == tiempo_espera) begin
+					if (x == xpunto) begin
+						//if (cont_angulo_y == ypunto) begin
 //							if (z == z0cm) begin
-//								state = IDLE;
+//								//abrir gripper
+								state = IDLE;
 //							end else z = z - 1;
-//						end else y = y + 1;
-//					end else x = x + 1;
-//				end else cont_x = cont_x + 1;
-//			end
-//			
-//			IDLE: begin
-//				//Llegar a (5,0,5)
-//				if (cont_x == tiempo_espera) begin
-//					cont_x = 0;
-//					if (z == z5cm) begin
-//						if (x == x5cm) begin
-//							state = BUSCANDO_SUBIENDO;
-//						end else x = x - 1;
-//					end else z = z + 1;
-//				end else cont_x = cont_x + 1;
-//			end
+						//end else if (cont_angulo_y < ypunto) cont_angulo_y = cont_angulo_y + 1;
+						//else cont_angulo_y = cont_angulo_y - 1;
+					end else if (x < xpunto) x = x + 1;
+					else x = x -1;
+				end else cont_x = cont_x + 1;
+			end
+			
+			IDLE: begin
+				//Llegar a (5,0,5)
+				if (cont_x == tiempo_espera) begin
+					cont_x = 0;
+					if (z == z5cm) begin
+						if (x == x5cm) begin
+							z = 90;
+							state = BUSCANDO_SUBIENDO;
+						end else x = x - 1;
+					end else z = z + 1;
+				end else cont_x = cont_x + 1;
+			end
 		endcase
 	 end
 

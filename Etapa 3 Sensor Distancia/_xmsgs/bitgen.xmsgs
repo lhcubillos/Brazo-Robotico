@@ -11,9 +11,6 @@
 <msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">sw2_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">canal_serial_receptor_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
 <msg type="warning" file="PhysDesignRules" num="781" delta="old" ><arg fmt="%s" index="1">PULLUP</arg> on an active net. <arg fmt="%s" index="2">PULLUP</arg> of comp <arg fmt="%s" index="3">trig</arg> is set but the tri state is not configured. 
 </msg>
 
