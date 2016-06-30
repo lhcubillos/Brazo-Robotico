@@ -10,7 +10,7 @@ module contador_8bits(
     );
 	
 	initial begin
-		pos = 8'b00101101;
+		pos = 8'b10000000;
 	end
 	
 	/*	

@@ -1,0 +1,7 @@
+MO contador_8bits NULL contador_8bits.v vlg6B/contador__8bits.bin 1467236537
+MO main NULL main.v vlg2D/main.bin 1467236537
+MO servo_controller NULL servo_controller.v vlg02/servo__controller.bin 1467236537
+MO btn_clk_divider NULL btn_clk_divider.v vlg77/btn__clk__divider.bin 1467236537
+MO servo_pwm NULL servo_pwm.v vlg56/servo__pwm.bin 1467236537
+MO serial_mov NULL serial_mov.v vlg49/serial__mov.bin 1467236537
+MO btn_controller NULL btn_controller.v vlg6F/btn__controller.bin 1467236537
