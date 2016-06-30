@@ -20,9 +20,6 @@
 <msg type="warning" file="HDLCompilers" num="261" delta="old" ><arg fmt="%s" index="1">&quot;main.v&quot; line 85 </arg>Connection to output port &apos;<arg fmt="%s" index="2">servo_pulse</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="261" delta="old" ><arg fmt="%s" index="1">&quot;main.v&quot; line 92 </arg>Connection to output port &apos;<arg fmt="%s" index="2">distancia</arg>&apos; does not match port size
-</msg>
-
 <msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;controlador_etapa.v&quot; line 113 </arg>Connection to input port &apos;<arg fmt="%s" index="2">constante</arg>&apos; does not match port size
 </msg>
 
@@ -44,19 +41,10 @@
 <msg type="warning" file="Xst" num="1305" delta="old" >Output &lt;<arg fmt="%s" index="1">timeout</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">suma_distancias</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">distancias_anteriores&lt;18:5&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">distancias_anteriores&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">distancias_anteriores</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">contador_extra</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">cont_distancias</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1305" delta="old" >Output &lt;<arg fmt="%s" index="1">decimal</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">00000000000000</arg>.
@@ -175,9 +163,6 @@ It will be removed from the design.
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">servo_pulse_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">servo_pwm5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">6 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;servo_pulse_2&gt; &lt;servo_pulse_3&gt; &lt;servo_pulse_4&gt; &lt;servo_pulse_5&gt; &lt;servo_pulse_6&gt; &lt;servo_pulse_7&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">distancias_anteriores_4_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">controlador_sensor_distancia</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">11 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;distancias_anteriores_4_21&gt; &lt;distancias_anteriores_4_22&gt; &lt;distancias_anteriores_4_23&gt; &lt;distancias_anteriores_4_24&gt; &lt;distancias_anteriores_4_25&gt; &lt;distancias_anteriores_4_26&gt; &lt;distancias_anteriores_4_27&gt; &lt;distancias_anteriores_4_28&gt; &lt;distancias_anteriores_4_29&gt; &lt;distancias_anteriores_4_30&gt; &lt;distancias_anteriores_4_31&gt; </arg>
-</msg>
-
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">sseg_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BCDTo7Seg</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -202,36 +187,6 @@ It will be removed from the design.
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">servo_pulse_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">servo_pwm5</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">distancia_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">controlador_sensor_distancia</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">distancia_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">controlador_sensor_distancia</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">distancia_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">controlador_sensor_distancia</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">distancia_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">controlador_sensor_distancia</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">distancia_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">controlador_sensor_distancia</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">distancia_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">controlador_sensor_distancia</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">distancia_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">controlador_sensor_distancia</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">distancia_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">controlador_sensor_distancia</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">distancia_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">controlador_sensor_distancia</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">distancia_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">controlador_sensor_distancia</arg>&gt;.
-</msg>
-
 <msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">servo_pulse</arg>&lt;<arg fmt="%d" index="2">7</arg>:<arg fmt="%d" index="3">1</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">servo_pwm</arg>&gt;.
 </msg>
 
@@ -247,18 +202,6 @@ It will be removed from the design.
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">sseg_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">seven_seg</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">distancias_anteriores_4_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">controlador_sensor_distancia</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">11 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;distancias_anteriores_4_21&gt; &lt;distancias_anteriores_4_22&gt; &lt;distancias_anteriores_4_23&gt; &lt;distancias_anteriores_4_24&gt; &lt;distancias_anteriores_4_25&gt; &lt;distancias_anteriores_4_26&gt; &lt;distancias_anteriores_4_27&gt; &lt;distancias_anteriores_4_28&gt; &lt;distancias_anteriores_4_29&gt; &lt;distancias_anteriores_4_30&gt; &lt;distancias_anteriores_4_31&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">distancias_anteriores_3_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">controlador_sensor_distancia</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">11 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;distancias_anteriores_3_21&gt; &lt;distancias_anteriores_3_22&gt; &lt;distancias_anteriores_3_23&gt; &lt;distancias_anteriores_3_24&gt; &lt;distancias_anteriores_3_25&gt; &lt;distancias_anteriores_3_26&gt; &lt;distancias_anteriores_3_27&gt; &lt;distancias_anteriores_3_28&gt; &lt;distancias_anteriores_3_29&gt; &lt;distancias_anteriores_3_30&gt; &lt;distancias_anteriores_3_31&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">distancias_anteriores_2_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">controlador_sensor_distancia</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">11 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;distancias_anteriores_2_21&gt; &lt;distancias_anteriores_2_22&gt; &lt;distancias_anteriores_2_23&gt; &lt;distancias_anteriores_2_24&gt; &lt;distancias_anteriores_2_25&gt; &lt;distancias_anteriores_2_26&gt; &lt;distancias_anteriores_2_27&gt; &lt;distancias_anteriores_2_28&gt; &lt;distancias_anteriores_2_29&gt; &lt;distancias_anteriores_2_30&gt; &lt;distancias_anteriores_2_31&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">distancias_anteriores_1_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">controlador_sensor_distancia</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">11 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;distancias_anteriores_1_21&gt; &lt;distancias_anteriores_1_22&gt; &lt;distancias_anteriores_1_23&gt; &lt;distancias_anteriores_1_24&gt; &lt;distancias_anteriores_1_25&gt; &lt;distancias_anteriores_1_26&gt; &lt;distancias_anteriores_1_27&gt; &lt;distancias_anteriores_1_28&gt; &lt;distancias_anteriores_1_29&gt; &lt;distancias_anteriores_1_30&gt; &lt;distancias_anteriores_1_31&gt; </arg>
-</msg>
-
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">seg_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">seven_seg</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -268,34 +211,22 @@ It will be removed from the design.
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">contador_en_espera_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">controlador_sensor_distancia</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">contador_en_espera_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">controlador_sensor_distancia</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">contador_en_espera_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">controlador_sensor_distancia</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">contador_en_espera_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">controlador_sensor_distancia</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">contador_en_espera_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">controlador_sensor_distancia</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">contador_en_espera_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">controlador_sensor_distancia</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">controlador_sensor_distancia/distancia_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">contador_en_espera_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">controlador_sensor_distancia</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">controlador_etapa/receptor_serial/state_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.

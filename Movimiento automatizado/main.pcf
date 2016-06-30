@@ -1,9 +1,9 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Jun 29 17:42:36 2016
+// Written by: Map P.20131013 on Wed Jun 29 23:59:25 2016
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "sw" LOCATE = SITE "P11" LEVEL 1;
+COMP "sw" LOCATE = SITE "L3" LEVEL 1;
 COMP "clk" LOCATE = SITE "B8" LEVEL 1;
 COMP "servo1" LOCATE = SITE "B2" LEVEL 1;
 COMP "servo2" LOCATE = SITE "A3" LEVEL 1;

@@ -12,17 +12,17 @@ always @ (distancia)
 begin
 
 
-Mem[0] = 0; //5cm
-Mem[1] = 26; //6 cm
-Mem[2] = 51; //7 cm
-Mem[3] = 77; //8cm
-Mem[4] = 102; //9cm
-Mem[5] = 128; //10cm
-Mem[6] = 153; //11cm
-Mem[7] = 179; //12 cm
-Mem[8] = 204; //13 cm
-Mem[9] = 230; //14 cm
-Mem[10] = 255; //15cm
+Mem[0] = 0;
+Mem[1] = 26;
+Mem[2] = 51;
+Mem[3] = 77;
+Mem[4] = 102;
+Mem[5] = 128;
+Mem[6] = 153;
+Mem[7] = 179;
+Mem[8] = 204;
+Mem[9] = 230;
+Mem[10] = 255;
 
 
 

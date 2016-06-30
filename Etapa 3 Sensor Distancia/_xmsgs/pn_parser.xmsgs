@@ -8,7 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/Etapa 3 Sensor Distancia/ROM_mapeo_distancia.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/Etapa 3 Sensor Distancia/controlador_sensor_distancia.v&quot; into library work</arg>
 </msg>
 
 </messages>
