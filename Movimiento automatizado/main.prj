@@ -1,0 +1,7 @@
+verilog work "btn_clk_divider.v"
+verilog work "servo_pwm.v"
+verilog work "contador_8bits.v"
+verilog work "btn_controller.v"
+verilog work "servo_controller.v"
+verilog work "serial_mov.v"
+verilog work "main.v"

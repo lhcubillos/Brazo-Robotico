@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Vicente/Desktop/Lab Digitales/Brazo-Robotico/Movimiento automatizado/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Vicente/Desktop/Lab Digitales/Brazo-Robotico/Movimiento automatizado/xst"
+elaborate
+-ifn serial_mov.prj
+-ifmt mixed

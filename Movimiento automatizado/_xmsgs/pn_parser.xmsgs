@@ -8,25 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/Movimiento automatizado/btn_clk_divider.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/Movimiento automatizado/btn_controller.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/Movimiento automatizado/contador_8bits.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/Movimiento automatizado/main.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/Movimiento automatizado/serial_mov.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/Movimiento automatizado/servo_controller.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/LH Cubillos/Desktop/Universidad/2016-1-Windows/Lab digitales/Proyecto/Brazo-Robotico/Movimiento automatizado/servo_pwm.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Vicente/Desktop/Lab Digitales/Brazo-Robotico/Movimiento automatizado/serial_mov.v&quot; into library work</arg>
 </msg>
 
 </messages>

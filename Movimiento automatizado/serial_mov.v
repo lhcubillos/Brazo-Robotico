@@ -34,16 +34,50 @@ module serial_mov(
 	 output reg [1:0] btn5
     );
 	
-	parameter sub = 2'b10;
-	parameter add = 2'b01;
+	parameter sub = 2'b10; 
+	parameter add = 2'b01; 
 	parameter zero = 2'b00;
 	
-	parameter point1 = 8'b10000000;
-	parameter point2 = 8'b11000000;
+	parameter pos_gripper = 8'b10000000;
 	
-	reg EST; //Estado 0: mov1, Estado 1: mov2
+	//pointx_y -> x: estado, y: servo
+	parameter point1_1 = 8'b01010101;
+	parameter point1_2 = 8'b11010101;
+	parameter point1_3 = 8'b01001110;
+	parameter point1_4 = 8'b11011011;
+	
+	parameter point2_1 = 8'b01001100;
+	parameter point2_2 = 8'b11011101;
+	parameter point2_3 = 8'b00100000;
+	parameter point2_4 = 8'b11111111;
+	
+	parameter point3_1 = 8'b10110010;
+	parameter point3_2 = 8'b10110110;
+	parameter point3_3 = 8'b10010110;
+	parameter point3_4 = 8'b10000000;
+	
+	parameter point4_1 = 8'b10110010;
+	parameter point4_2 = 8'b11001010;
+	parameter point4_3 = 8'b11010001;
+	parameter point4_4 = 8'b01111111;
+	
+	reg [7:0] point_s1;
+	reg [7:0] point_s2;
+	reg [7:0] point_s3;
+	reg [7:0] point_s4;
+	
+	//reg [24:0] cont;
+	//reg delay;
+	
+	reg [2:0] EST;
 	initial begin
-		EST = 1;
+		//cont = 25'd0;
+		//delay = 0;
+		EST = 3'b000;
+		point_s1 = point2_1;
+		point_s2 = point2_2;
+		point_s3 = point2_3;
+		point_s4 = point2_4;
 		btn1 = zero;
 		btn2 = zero;
 		btn3 = zero;
@@ -53,317 +87,129 @@ module serial_mov(
 
 	always @(posedge(clk)) begin
 		if (sw) begin
-			if (pos1 == point1 && pos4 == point1) begin
-				EST <= 1;
-			end
-			else if (pos1 == point2 && pos4 == point2) begin
-				EST <= 0;
-			end
-		
-			if (EST) begin
-				if (pos1 < point2) begin
-					btn1 <= add;
-				end
-				else if (pos1 > point2) begin
-					btn1 <= sub;
-				end
-				else begin
-					btn1 <= zero;
-				end
-
-				if (pos2 < point2) begin
-					btn2 <= add;
-				end
-				else if (pos2 > point2) begin
-					btn2 <= sub;
-				end
-				else begin
-					btn2 <= zero;
-				end
-				
-				if (pos3 < point2) begin
-					btn3 <= add;
-				end
-				else if (pos3 > point2) begin
-					btn3 <= sub;
-				end
-				else begin
-					btn3 <= zero;
-				end
-				
-				if (pos4 < point2) begin
-					btn4 <= add;
-				end
-				else if (pos4 > point2) begin
-					btn4 <= sub;
-				end
-				else begin
-					btn4 <= zero;
-				end
-				
-				if (pos5 < point2) begin
-					btn5 <= add;
-				end
-				else if (pos5 > point2) begin
-					btn5 <= sub;
-				end
-				else begin
-					btn5 <= zero;
-				end
-
-			end
-			else begin
-				if (pos1 < point1) begin
-					btn1 <= add;
-				end
-				else if (pos1 > point1) begin
-					btn1 <= sub;
-				end
-				else begin
-					btn1 <= zero;
-				end
-
-				if (pos2 < point1) begin
-					btn2 <= add;
-				end
-				else if (pos2 > point1) begin
-					btn2 <= sub;
-				end
-				else begin
-					btn2 <= zero;
-				end
-				
-				if (pos3 < point1) begin
-					btn3 <= add;
-				end
-				else if (pos3 > point1) begin
-					btn3 <= sub;
-				end
-				else begin
-					btn3 <= zero;
-				end
-				
-				if (pos4 < point1) begin
-					btn4 <= add;
-				end
-				else if (pos4 > point1) begin
-					btn4 <= sub;
-				end
-				else begin
-					btn4 <= zero;
-				end
-				
-				if (pos5 < point1) begin
-					btn5 <= add;
-				end
-				else if (pos5 > point1) begin
-					btn5 <= sub;
-				end
-				else begin
-					btn5 <= zero;
-				end
-
-			end
-		end
-		else begin
-			btn1 <= zero;
-			btn2 <= zero;
-			btn3 <= zero;
-			btn4 <= zero;
-			btn5 <= zero;
-		end
-	
-	end
-
-//	always @(posedge(clk)) begin
-//		if (sw) begin
-//			
-//			if (pos1 == point1 && pos2 == point1 && pos3 == point1 && pos4 == point1 && pos5 == point1) begin
-//				EST <= 1;
+			
+//			if (cont == 25'b1111111111111111111111111) begin
+//				delay = 0;
 //			end
-//			else if (pos1 == point2 && pos2 == point2 && pos3 == point2 && pos4 == point2 && pos5 == point2) begin
-//				EST <= 0;
+//
+//			if (delay) begin
+//				cont = cont + 25'd1;
 //			end
 //			else begin
-//				EST <= EST;
+			if (EST == 3'b001 && pos1 == point1_1 && pos2 == point1_2 && pos3 == point1_3 && pos4 == point1_4 && pos5 == pos_gripper) begin
+				EST = 3'b010;
+				//delay = 1;
+			end
+			else if (EST == 3'b000 && pos1 == point2_1 && pos2 == point2_2 && pos3 == point2_3 && pos4 == point2_4 && pos5 == pos_gripper) begin
+				EST = 3'b001;
+				//delay = 1;
+			end
+			else if (EST == 3'b010 && pos1 == point2_1 && pos2 == point2_2 && pos3 == point2_3 && pos4 == point2_4 && pos5 == pos_gripper) begin
+				EST = 3'b011;
+				//delay = 1;
+			end
+			else if (EST == 3'b011 && pos1 == point3_1 && pos2 == point3_2 && pos3 == point3_3 && pos4 == point3_4 && pos5 == pos_gripper) begin
+				EST = 3'b100;
+				//delay = 1;
+			end
+			else if (EST == 3'b101 && pos1 == point3_1 && pos2 == point3_2 && pos3 == point3_3 && pos4 == point3_4 && pos5 == pos_gripper) begin
+				EST = 3'b000;
+				//delay = 1;
+			end
+			else if (EST == 3'b100 && pos1 == point4_1 && pos2 == point4_2 && pos3 == point4_3 && pos4 == point4_4 && pos5 == pos_gripper) begin
+				EST = 3'b101;
+				//delay = 1;
+			end
+			else if (EST == 3'b110 || EST == 3'b111) begin
+				EST = 3'b000;
+			end
+		
+			if (EST == 3'b000 || EST == 3'b010) begin
+				point_s1 = point2_1;
+				point_s2 = point2_2;
+				point_s3 = point2_3;
+				point_s4 = point2_4;
+			end
+			else if (EST == 3'b001) begin
+				point_s1 = point1_1;
+				point_s2 = point1_2;
+				point_s3 = point1_3;
+				point_s4 = point1_4;
+			end
+			else if (EST == 3'b011 || EST == 3'b101) begin
+				point_s1 = point3_1;
+				point_s2 = point3_2;
+				point_s3 = point3_3;
+				point_s4 = point3_4;
+			end
+			else if (EST == 3'b100) begin
+				point_s1 = point4_1;
+				point_s2 = point4_2;
+				point_s3 = point4_3;
+				point_s4 = point4_4;
+			end
+			
+			//ejecutar mov
+			if (pos1 < point_s1) begin
+				btn1 = add;
+			end
+			else if (pos1 > point_s1) begin
+				btn1 = sub;
+			end
+			else begin
+				btn1 = zero;
+			end
+
+			if (pos2 < point_s2) begin
+				btn2 = add;
+			end
+			else if (pos2 > point_s2) begin
+				btn2 = sub;
+			end
+			else begin
+				btn2 = zero;
+			end
+
+			if (pos3 < point_s3) begin
+				btn3 = add;
+			end
+			else if (pos3 > point_s3) begin
+				btn3 = sub;
+			end
+			else begin
+				btn3 = zero;
+			end
+
+			if (pos4 < point_s4) begin
+				btn4 = add;
+			end
+			else if (pos4 > point_s4) begin
+				btn4 = sub;
+			end
+			else begin
+				btn4 = zero;
+			end
+
+			if (pos5 < pos_gripper) begin
+				btn5 = add;
+			end
+			else if (pos5 > pos_gripper) begin
+				btn5 = sub;
+			end
+			else begin
+				btn5 = zero;
+			end
+
 //			end
-//			
-//			//Mov1
-//			if (EST) begin 
-//				/*
-//				case (pos1)
-//					pos1 > point2: btn1 <= sub;
-//					pos1 < point2: btn1 <= add;
-//					default: btn1 <= zero;
-//				endcase
-//				case (pos2)
-//					pos2 > point2: btn2 <= sub;
-//					pos2 < point2: btn2 <= add;
-//					default: btn2 <= zero;
-//				endcase
-//				case (pos3)
-//					pos3 > point2: btn3 <= sub;
-//					pos3 < point2: btn3 <= add;
-//					default: btn3 <= zero;
-//				endcase
-//				case (pos4)
-//					pos4 > point2: btn4 <= sub;
-//					pos4 < point2: btn4 <= add;
-//					default: btn4 <= zero;
-//				endcase
-//				case (pos5)
-//					pos5 > point2: btn5 <= sub;
-//					pos5 < point2: btn5 <= add;
-//					default: btn5 <= zero;
-//				endcase
-//				*/
-//				if (pos1 > point2) begin
-//					btn1 <= sub;
-//				end
-//				else if (pos1 < point2) begin
-//					btn1 <= add;
-//				end
-//				else begin
-//					btn1 <= zero;
-//				end
-//				
-//				if (pos2 > point2) begin
-//					btn2 <= sub;
-//				end
-//				else if (pos2 < point2) begin
-//					btn2 <= add;
-//				end
-//				else begin
-//					btn2 <= zero;
-//				end
-//				
-//				if (pos3 > point2) begin
-//					btn3 <= add;
-//				end
-//				else if (pos3 < point2) begin
-//					btn3 <= sub;
-//				end
-//				else begin
-//					btn3 <= zero;
-//				end
-//				
-//				if (pos4 > point2) begin
-//					btn4 <= sub;
-//				end
-//				else if (pos4 < point2) begin
-//					btn4 <= add;
-//				end
-//				else begin
-//					btn4 <= zero;
-//				end
-//				
-//				if (pos5 > point2) begin
-//					btn5 <= sub;
-//				end
-//				else if (pos5 < point2) begin
-//					btn5 <= add;
-//				end
-//				else begin
-//					btn5 <= zero;
-//				end
-//				
-//			end
-//			
-//			//Mov2
-//			else begin 
-//				/*
-//				case (pos1)
-//					pos1 > point1: btn1 <= sub;
-//					pos1 < point1: btn1 <= add;
-//					default: btn1 <= zero;
-//				endcase
-//				case (pos2)
-//					pos2 > point1: btn2 <= sub;
-//					pos2 < point1: btn2 <= add;
-//					default: btn2 <= zero;
-//				endcase
-//				case (pos3)
-//					pos3 > point1: btn3 <= sub;
-//					pos3 < point1: btn3 <= add;
-//					default: btn3 <= zero;
-//				endcase
-//				case (pos4)
-//					pos4 > point1: btn4 <= sub;
-//					pos4 < point1: btn4 <= add;
-//					default: btn4 <= zero;
-//				endcase
-//				case (pos5)
-//					pos5 > point1: btn5 <= sub;
-//					pos5 < point1: btn5 <= add;
-//					default: btn5 <= zero;
-//				endcase
-//				*/
-//				
-//				if (pos1 > point1) begin
-//					btn1 <= sub;
-//				end
-//				else if (pos1 < point1) begin
-//					btn1 <= add;
-//				end
-//				else begin
-//					btn1 <= zero;
-//				end
-//				
-//				if (pos2 > point1) begin
-//					btn2 <= sub;
-//				end
-//				else if (pos2 < point1) begin
-//					btn2 <= add;
-//				end
-//				else begin
-//					btn2 <= zero;
-//				end
-//				
-//				if (pos3 > point1) begin
-//					btn3 <= sub;
-//				end
-//				else if (pos3 < point1) begin
-//					btn3 <= add;
-//				end
-//				else begin
-//					btn3 <= zero;
-//				end
-//				
-//				if (pos4 > point1) begin
-//					btn4 <= sub;
-//				end
-//				else if (pos4 < point1) begin
-//					btn4 <= add;
-//				end
-//				else begin
-//					btn4 <= zero;
-//				end
-//				
-//				if (pos5 > point1) begin
-//					btn5 <= sub;
-//				end
-//				else if (pos5 < point1) begin
-//					btn5 <= add;
-//				end
-//				else begin
-//					btn5 <= zero;
-//				end 
-//				
-//			end
-//		end
-//		
-//		//sw=0
-//		else begin 
-//			
-//			btn1 <= zero;
-//			btn2 <= zero;
-//			btn3 <= zero;
-//			btn4 <= zero;
-//			btn5 <= zero;
-//		end
-//
-//	
-//	end
-	 
+		end
+		else begin
+			btn1 = zero;
+			btn2 = zero;
+			btn3 = zero;
+			btn4 = zero;
+			btn5 = zero;
+		end
+	
+	end	 
 
 endmodule
