@@ -44,7 +44,7 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-echo        |    2.725(R)|    0.322(R)|clk_BUFGP         |   0.000|
+echo        |    3.418(R)|    0.585(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -52,31 +52,31 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-an<0>       |    7.863(R)|clk_BUFGP         |   0.000|
+an<0>       |    7.865(R)|clk_BUFGP         |   0.000|
 an<1>       |    6.615(R)|clk_BUFGP         |   0.000|
-an<2>       |    7.187(R)|clk_BUFGP         |   0.000|
-an<3>       |    7.336(R)|clk_BUFGP         |   0.000|
-leds<0>     |    7.444(R)|clk_BUFGP         |   0.000|
-leds<1>     |    7.379(R)|clk_BUFGP         |   0.000|
-leds<2>     |    8.415(R)|clk_BUFGP         |   0.000|
-leds<3>     |    7.465(R)|clk_BUFGP         |   0.000|
-leds<4>     |    7.448(R)|clk_BUFGP         |   0.000|
-leds<5>     |    7.714(R)|clk_BUFGP         |   0.000|
-leds<6>     |    7.644(R)|clk_BUFGP         |   0.000|
-leds<7>     |    7.561(R)|clk_BUFGP         |   0.000|
-seg<0>      |    6.915(R)|clk_BUFGP         |   0.000|
-seg<1>      |    7.393(R)|clk_BUFGP         |   0.000|
-seg<2>      |    7.316(R)|clk_BUFGP         |   0.000|
-seg<3>      |    7.134(R)|clk_BUFGP         |   0.000|
-seg<4>      |    7.392(R)|clk_BUFGP         |   0.000|
-seg<5>      |    7.088(R)|clk_BUFGP         |   0.000|
-seg<6>      |    7.092(R)|clk_BUFGP         |   0.000|
-servo1      |   10.972(R)|clk_BUFGP         |   0.000|
-servo2      |   11.122(R)|clk_BUFGP         |   0.000|
-servo3      |   10.531(R)|clk_BUFGP         |   0.000|
-servo4      |   10.825(R)|clk_BUFGP         |   0.000|
-servo5      |   10.058(R)|clk_BUFGP         |   0.000|
-trig        |   10.564(R)|clk_BUFGP         |   0.000|
+an<2>       |    6.677(R)|clk_BUFGP         |   0.000|
+an<3>       |    7.379(R)|clk_BUFGP         |   0.000|
+leds<0>     |    7.438(R)|clk_BUFGP         |   0.000|
+leds<1>     |    7.482(R)|clk_BUFGP         |   0.000|
+leds<2>     |    7.222(R)|clk_BUFGP         |   0.000|
+leds<3>     |    7.428(R)|clk_BUFGP         |   0.000|
+leds<4>     |    7.687(R)|clk_BUFGP         |   0.000|
+leds<5>     |    7.883(R)|clk_BUFGP         |   0.000|
+leds<6>     |    7.710(R)|clk_BUFGP         |   0.000|
+leds<7>     |    8.079(R)|clk_BUFGP         |   0.000|
+seg<0>      |    6.921(R)|clk_BUFGP         |   0.000|
+seg<1>      |    7.400(R)|clk_BUFGP         |   0.000|
+seg<2>      |    7.312(R)|clk_BUFGP         |   0.000|
+seg<3>      |    7.078(R)|clk_BUFGP         |   0.000|
+seg<4>      |    7.083(R)|clk_BUFGP         |   0.000|
+seg<5>      |    7.099(R)|clk_BUFGP         |   0.000|
+seg<6>      |    7.091(R)|clk_BUFGP         |   0.000|
+servo1      |   11.286(R)|clk_BUFGP         |   0.000|
+servo2      |   10.489(R)|clk_BUFGP         |   0.000|
+servo3      |   10.767(R)|clk_BUFGP         |   0.000|
+servo4      |   10.519(R)|clk_BUFGP         |   0.000|
+servo5      |   10.653(R)|clk_BUFGP         |   0.000|
+trig        |   10.857(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -84,18 +84,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    9.112|         |         |         |
+clk            |    9.731|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Wed Jun 29 16:20:43 2016 
+Analysis completed Wed Jun 29 22:01:31 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 165 MB
+Peak Memory Usage: 170 MB
 
 
 

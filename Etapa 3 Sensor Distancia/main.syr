@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: main.prj
 
@@ -140,10 +140,11 @@ Analyzing hierarchy for module <servo_pwm> in library <work> with parameters.
 	init = "000010001100"
 
 Analyzing hierarchy for module <controlador_sensor_distancia> in library <work> with parameters.
-	ENVIANDO_PULSO = "00"
-	EN_ESPERA = "11"
-	ESPERANDO_PULSO = "10"
-	RECIBIENDO_PULSO = "01"
+	DELAY = "00000000000000000000000000000100"
+	ENVIANDO_PULSO = "00000000000000000000000000000000"
+	EN_ESPERA = "00000000000000000000000000000011"
+	ESPERANDO_PULSO = "00000000000000000000000000000010"
+	RECIBIENDO_PULSO = "00000000000000000000000000000001"
 	TIMEOUT = "00000000000001111010000100100000"
 	tiempo10us = "00000000000000000000000111110100"
 
@@ -199,10 +200,11 @@ Analyzing module <servo_pwm> in library <work>.
 Module <servo_pwm> is correct for synthesis.
  
 Analyzing module <controlador_sensor_distancia> in library <work>.
-	ENVIANDO_PULSO = 2'b00
-	EN_ESPERA = 2'b11
-	ESPERANDO_PULSO = 2'b10
-	RECIBIENDO_PULSO = 2'b01
+	DELAY = 32'sb00000000000000000000000000000100
+	ENVIANDO_PULSO = 32'sb00000000000000000000000000000000
+	EN_ESPERA = 32'sb00000000000000000000000000000011
+	ESPERANDO_PULSO = 32'sb00000000000000000000000000000010
+	RECIBIENDO_PULSO = 32'sb00000000000000000000000000000001
 	TIMEOUT = 32'sb00000000000001111010000100100000
 	tiempo10us = 32'sb00000000000000000000000111110100
 Module <controlador_sensor_distancia> is correct for synthesis.
@@ -269,7 +271,7 @@ WARNING:Xst:646 - Signal <count> is assigned but never used. This unconnected si
     Found 8-bit register for signal <servo_pulse>.
     Found 8-bit up counter for signal <ClkCount>.
     Found 1-bit register for signal <ClkTick>.
-    Found 12-bit adder for signal <old_count_9$addsub0000> created at line 36.
+    Found 12-bit adder for signal <old_count_10$addsub0000> created at line 36.
     Found 13-bit up counter for signal <PulseCount>.
     Found 13-bit comparator less for signal <servo_pulse$cmp_lt0000> created at line 37.
     Summary:
@@ -283,32 +285,42 @@ Unit <servo_pwm> synthesized.
 Synthesizing Unit <controlador_sensor_distancia>.
     Related source file is "controlador_sensor_distancia.v".
 WARNING:Xst:1305 - Output <timeout> is never assigned. Tied to value 0.
-WARNING:Xst:1780 - Signal <distancias_anteriores> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <suma_distancias> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <distancias_anteriores<18:5>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <distancias_anteriores<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <contador_extra> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-    Found 2-bit register for signal <state>.
+WARNING:Xst:1780 - Signal <cont_distancias> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 3-bit register for signal <state>.
     Found 1-bit register for signal <trig>.
-    Found 9-bit register for signal <distancia>.
-    Found 31-bit up counter for signal <contador_10us>.
-    Found 31-bit comparator greatequal for signal <contador_10us$cmp_ge0000> created at line 60.
-    Found 31-bit register for signal <contador_echo>.
-    Found 31-bit adder for signal <contador_echo$addsub0000> created at line 75.
-    Found 31-bit comparator less for signal <contador_echo$cmp_lt0000> created at line 82.
-    Found 24-bit register for signal <contador_en_espera>.
-    Found 24-bit adder for signal <contador_en_espera$addsub0000> created at line 83.
-    Found 24-bit 4-to-1 multiplexer for signal <contador_en_espera$mux0000>.
+    Found 19-bit register for signal <distancia>.
+    Found 31-bit up counter for signal <cont_delay>.
+    Found 36-bit up counter for signal <contador_10us>.
+    Found 36-bit comparator greatequal for signal <contador_10us$cmp_ge0000> created at line 65.
+    Found 36-bit register for signal <contador_echo>.
+    Found 36-bit adder for signal <contador_echo$addsub0000> created at line 80.
+    Found 36-bit 4-to-1 multiplexer for signal <contador_echo$mux0000>.
+    Found 36-bit register for signal <contador_en_espera>.
+    Found 36-bit adder for signal <contador_en_espera$addsub0000> created at line 88.
     Found 31-bit up counter for signal <contador_timeout>.
-    Found 9-bit subtractor for signal <distancia$sub0000> created at line 99.
-    Found 9-bit up counter for signal <distancia_temporal>.
-    Found 31-bit adder for signal <old_contador_10us_10$add0000> created at line 59.
-    Found 31-bit comparator greatequal for signal <state$cmp_ge0000> created at line 71.
-    Found 2-bit 4-to-1 multiplexer for signal <state$mux0000>.
-    Found 31-bit comparator greatequal for signal <trig$cmp_ge0000> created at line 60.
+    Found 32-bit comparator not equal for signal <distancia$cmp_ne0000> created at line 108.
+    Found 32-bit comparator not equal for signal <distancia$cmp_ne0001> created at line 108.
+    Found 32-bit comparator not equal for signal <distancia$cmp_ne0002> created at line 108.
+    Found 33-bit comparator not equal for signal <distancia$cmp_ne0003> created at line 108.
+    Found 19-bit up counter for signal <distancia_temporal>.
+    Found 128-bit register for signal <distancias_anteriores<4:1>>.
+    Found 19-bit comparator greatequal for signal <distancias_anteriores_1$cmp_ge0000> created at line 91.
+    Found 19-bit comparator lessequal for signal <distancias_anteriores_1$cmp_le0000> created at line 91.
+    Found 21-bit subtractor for signal <distancias_anteriores_4$sub0000> created at line 96.
+    Found 36-bit adder for signal <old_contador_10us_11$add0000> created at line 64.
+    Found 31-bit comparator greatequal for signal <state$cmp_ge0000> created at line 76.
+    Found 36-bit comparator less for signal <state$cmp_lt0000> created at line 87.
+    Found 36-bit comparator greatequal for signal <trig$cmp_ge0000> created at line 65.
     Summary:
-	inferred   3 Counter(s).
-	inferred  67 D-type flip-flop(s).
+	inferred   4 Counter(s).
+	inferred 223 D-type flip-flop(s).
 	inferred   5 Adder/Subtractor(s).
-	inferred   4 Comparator(s).
-	inferred  26 Multiplexer(s).
+	inferred  10 Comparator(s).
+	inferred  36 Multiplexer(s).
 Unit <controlador_sensor_distancia> synthesized.
 
 
@@ -348,8 +360,8 @@ Synthesizing Unit <transmisor_serial>.
     Found 1-bit 30-to-1 multiplexer for signal <$varindex0000> created at line 55.
     Found 6-bit up counter for signal <cont_data>.
     Found 19-bit up counter for signal <cont_delay>.
-    Found 6-bit adder for signal <old_cont_data_21$add0000> created at line 56.
-    Found 19-bit adder for signal <old_cont_delay_22$add0000> created at line 65.
+    Found 6-bit adder for signal <old_cont_data_22$add0000> created at line 56.
+    Found 19-bit adder for signal <old_cont_delay_23$add0000> created at line 65.
     Found 1-bit register for signal <state>.
     Summary:
 	inferred   2 Counter(s).
@@ -375,7 +387,7 @@ Synthesizing Unit <ROM_mapeo_distancia>.
     Related source file is "ROM_mapeo_distancia.v".
 WARNING:Xst:647 - Input <distancia<8:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:646 - Signal <Mem> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-    Found 11x8-bit ROM for signal <$COND_23>.
+    Found 11x8-bit ROM for signal <$COND_24>.
     Summary:
 	inferred   1 ROM(s).
 Unit <ROM_mapeo_distancia> synthesized.
@@ -449,9 +461,9 @@ Synthesizing Unit <seven_seg>.
     Found 4-bit register for signal <an_temp>.
     Found 16-bit comparator greatequal for signal <an_temp$cmp_ge0000> created at line 29.
     Found 16-bit up counter for signal <disp_ctr>.
-    Found 16-bit comparator lessequal for signal <old_sseg_25$cmp_le0000> created at line 32.
-    Found 16-bit comparator lessequal for signal <old_sseg_25$cmp_le0001> created at line 35.
-    Found 16-bit comparator lessequal for signal <old_sseg_25$cmp_le0002> created at line 38.
+    Found 16-bit comparator lessequal for signal <old_sseg_26$cmp_le0000> created at line 32.
+    Found 16-bit comparator lessequal for signal <old_sseg_26$cmp_le0001> created at line 35.
+    Found 16-bit comparator lessequal for signal <old_sseg_26$cmp_le0002> created at line 38.
     Found 7-bit register for signal <sseg>.
     Summary:
 	inferred   1 ROM(s).
@@ -485,9 +497,9 @@ WARNING:Xst:1780 - Signal <cont_x> is never used or assigned. This unconnected s
     Found 8-bit register for signal <cont_angulo_y>.
     Found 26-bit register for signal <cont_divider>.
     Found 9-bit subtractor for signal <distancia_para_mapear$addsub0000> created at line 40.
-    Found 8-bit adder for signal <old_cont_angulo_y_13$add0000> created at line 140.
-    Found 8-bit subtractor for signal <old_cont_angulo_y_14$sub0000> created at line 153.
-    Found 26-bit adder for signal <old_cont_divider_12$add0000> created at line 133.
+    Found 8-bit adder for signal <old_cont_angulo_y_14$add0000> created at line 140.
+    Found 8-bit subtractor for signal <old_cont_angulo_y_15$sub0000> created at line 153.
+    Found 26-bit adder for signal <old_cont_divider_13$add0000> created at line 133.
     Found 9-bit comparator greatequal for signal <state$cmp_ge0000> created at line 134.
     Found 9-bit comparator lessequal for signal <state$cmp_le0000> created at line 134.
     Found 8-bit register for signal <x>.
@@ -534,52 +546,56 @@ Macro Statistics
  12-bit adder                                          : 10
  16-bit adder                                          : 1
  19-bit adder                                          : 1
- 24-bit adder                                          : 1
+ 21-bit subtractor                                     : 1
  26-bit adder                                          : 1
- 31-bit adder                                          : 3
+ 31-bit adder                                          : 1
+ 36-bit adder                                          : 3
  4-bit adder                                           : 26
  6-bit adder                                           : 2
  8-bit adder                                           : 1
  8-bit subtractor                                      : 1
- 9-bit subtractor                                      : 2
-# Counters                                             : 21
+ 9-bit subtractor                                      : 1
+# Counters                                             : 22
  13-bit up counter                                     : 5
  16-bit up counter                                     : 1
- 19-bit up counter                                     : 1
+ 19-bit up counter                                     : 2
  2-bit up counter                                      : 1
  26-bit up counter                                     : 2
  31-bit up counter                                     : 2
+ 36-bit up counter                                     : 1
  6-bit up counter                                      : 2
  7-bit up counter                                      : 1
  8-bit up counter                                      : 5
- 9-bit up counter                                      : 1
-# Registers                                            : 64
+# Registers                                            : 68
  1-bit register                                        : 43
- 2-bit register                                        : 1
- 24-bit register                                       : 1
+ 19-bit register                                       : 1
  26-bit register                                       : 1
- 3-bit register                                        : 1
- 31-bit register                                       : 1
+ 3-bit register                                        : 2
+ 32-bit register                                       : 4
+ 36-bit register                                       : 2
  4-bit register                                        : 1
  6-bit register                                        : 1
  7-bit register                                        : 1
  8-bit register                                        : 12
- 9-bit register                                        : 1
-# Comparators                                          : 44
+# Comparators                                          : 50
  13-bit comparator less                                : 5
  16-bit comparator greatequal                          : 1
  16-bit comparator lessequal                           : 3
+ 19-bit comparator greatequal                          : 1
+ 19-bit comparator lessequal                           : 1
  26-bit comparator equal                               : 2
- 31-bit comparator greatequal                          : 3
- 31-bit comparator less                                : 1
+ 31-bit comparator greatequal                          : 1
+ 32-bit comparator not equal                           : 3
+ 33-bit comparator not equal                           : 1
+ 36-bit comparator greatequal                          : 2
+ 36-bit comparator less                                : 1
  4-bit comparator greater                              : 26
  6-bit comparator greatequal                           : 1
  9-bit comparator greatequal                           : 1
  9-bit comparator lessequal                            : 1
-# Multiplexers                                         : 3
+# Multiplexers                                         : 2
  1-bit 30-to-1 multiplexer                             : 1
- 2-bit 4-to-1 multiplexer                              : 1
- 24-bit 4-to-1 multiplexer                             : 1
+ 36-bit 4-to-1 multiplexer                             : 1
 
 =========================================================================
 
@@ -605,6 +621,7 @@ INFO:Xst:2261 - The FF/Latch <servo_pulse_1> in Unit <servo_pwm2> is equivalent 
 INFO:Xst:2261 - The FF/Latch <servo_pulse_1> in Unit <servo_pwm3> is equivalent to the following 6 FFs/Latches, which will be removed : <servo_pulse_2> <servo_pulse_3> <servo_pulse_4> <servo_pulse_5> <servo_pulse_6> <servo_pulse_7> 
 INFO:Xst:2261 - The FF/Latch <servo_pulse_1> in Unit <servo_pwm4> is equivalent to the following 6 FFs/Latches, which will be removed : <servo_pulse_2> <servo_pulse_3> <servo_pulse_4> <servo_pulse_5> <servo_pulse_6> <servo_pulse_7> 
 INFO:Xst:2261 - The FF/Latch <servo_pulse_1> in Unit <servo_pwm5> is equivalent to the following 6 FFs/Latches, which will be removed : <servo_pulse_2> <servo_pulse_3> <servo_pulse_4> <servo_pulse_5> <servo_pulse_6> <servo_pulse_7> 
+INFO:Xst:2261 - The FF/Latch <distancias_anteriores_4_20> in Unit <controlador_sensor_distancia> is equivalent to the following 11 FFs/Latches, which will be removed : <distancias_anteriores_4_21> <distancias_anteriores_4_22> <distancias_anteriores_4_23> <distancias_anteriores_4_24> <distancias_anteriores_4_25> <distancias_anteriores_4_26> <distancias_anteriores_4_27> <distancias_anteriores_4_28> <distancias_anteriores_4_29> <distancias_anteriores_4_30> <distancias_anteriores_4_31> 
 WARNING:Xst:1710 - FF/Latch <sseg_4> (without init value) has a constant value of 0 in block <BCDTo7Seg>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <sseg_5> (without init value) has a constant value of 0 in block <BCDTo7Seg>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <sseg_6> (without init value) has a constant value of 0 in block <BCDTo7Seg>. This FF/Latch will be trimmed during the optimization process.
@@ -613,6 +630,16 @@ WARNING:Xst:2677 - Node <servo_pulse_1> of sequential type is unconnected in blo
 WARNING:Xst:2677 - Node <servo_pulse_1> of sequential type is unconnected in block <servo_pwm3>.
 WARNING:Xst:2677 - Node <servo_pulse_1> of sequential type is unconnected in block <servo_pwm4>.
 WARNING:Xst:2677 - Node <servo_pulse_1> of sequential type is unconnected in block <servo_pwm5>.
+WARNING:Xst:2677 - Node <distancia_9> of sequential type is unconnected in block <controlador_sensor_distancia>.
+WARNING:Xst:2677 - Node <distancia_10> of sequential type is unconnected in block <controlador_sensor_distancia>.
+WARNING:Xst:2677 - Node <distancia_11> of sequential type is unconnected in block <controlador_sensor_distancia>.
+WARNING:Xst:2677 - Node <distancia_12> of sequential type is unconnected in block <controlador_sensor_distancia>.
+WARNING:Xst:2677 - Node <distancia_13> of sequential type is unconnected in block <controlador_sensor_distancia>.
+WARNING:Xst:2677 - Node <distancia_14> of sequential type is unconnected in block <controlador_sensor_distancia>.
+WARNING:Xst:2677 - Node <distancia_15> of sequential type is unconnected in block <controlador_sensor_distancia>.
+WARNING:Xst:2677 - Node <distancia_16> of sequential type is unconnected in block <controlador_sensor_distancia>.
+WARNING:Xst:2677 - Node <distancia_17> of sequential type is unconnected in block <controlador_sensor_distancia>.
+WARNING:Xst:2677 - Node <distancia_18> of sequential type is unconnected in block <controlador_sensor_distancia>.
 WARNING:Xst:2404 -  FFs/Latches <servo_pulse<7:1>> (without init value) have a constant value of 0 in block <servo_pwm>.
 
 =========================================================================
@@ -627,43 +654,48 @@ Macro Statistics
  12-bit adder                                          : 10
  16-bit adder                                          : 1
  19-bit adder                                          : 1
- 24-bit adder                                          : 1
+ 21-bit subtractor                                     : 1
  26-bit adder                                          : 1
  3-bit adder                                           : 2
- 31-bit adder                                          : 3
+ 31-bit adder                                          : 1
+ 36-bit adder                                          : 3
  4-bit adder                                           : 24
  6-bit adder                                           : 2
  8-bit adder                                           : 1
  8-bit subtractor                                      : 1
- 9-bit subtractor                                      : 2
-# Counters                                             : 21
+ 9-bit subtractor                                      : 1
+# Counters                                             : 22
  13-bit up counter                                     : 5
  16-bit up counter                                     : 1
- 19-bit up counter                                     : 1
+ 19-bit up counter                                     : 2
  2-bit up counter                                      : 1
  26-bit up counter                                     : 2
  31-bit up counter                                     : 2
+ 36-bit up counter                                     : 1
  6-bit up counter                                      : 2
  7-bit up counter                                      : 1
  8-bit up counter                                      : 5
- 9-bit up counter                                      : 1
-# Registers                                            : 192
- Flip-Flops                                            : 192
-# Comparators                                          : 44
+# Registers                                            : 348
+ Flip-Flops                                            : 348
+# Comparators                                          : 50
  13-bit comparator less                                : 5
  16-bit comparator greatequal                          : 1
  16-bit comparator lessequal                           : 3
+ 19-bit comparator greatequal                          : 1
+ 19-bit comparator lessequal                           : 1
  26-bit comparator equal                               : 2
- 31-bit comparator greatequal                          : 3
- 31-bit comparator less                                : 1
+ 31-bit comparator greatequal                          : 1
+ 32-bit comparator not equal                           : 3
+ 33-bit comparator not equal                           : 1
+ 36-bit comparator greatequal                          : 2
+ 36-bit comparator less                                : 1
  4-bit comparator greater                              : 26
  6-bit comparator greatequal                           : 1
  9-bit comparator greatequal                           : 1
  9-bit comparator lessequal                            : 1
-# Multiplexers                                         : 3
+# Multiplexers                                         : 2
  1-bit 30-to-1 multiplexer                             : 1
- 2-bit 4-to-1 multiplexer                              : 1
- 24-bit 4-to-1 multiplexer                             : 1
+ 36-bit 4-to-1 multiplexer                             : 1
 
 =========================================================================
 
@@ -674,21 +706,19 @@ WARNING:Xst:1293 - FF/Latch <state_2> has a constant value of 0 in block <recept
 WARNING:Xst:1710 - FF/Latch <sseg_4> (without init value) has a constant value of 0 in block <seven_seg>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sseg_5> (without init value) has a constant value of 0 in block <seven_seg>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sseg_6> (without init value) has a constant value of 0 in block <seven_seg>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <distancias_anteriores_4_20> in Unit <controlador_sensor_distancia> is equivalent to the following 11 FFs/Latches, which will be removed : <distancias_anteriores_4_21> <distancias_anteriores_4_22> <distancias_anteriores_4_23> <distancias_anteriores_4_24> <distancias_anteriores_4_25> <distancias_anteriores_4_26> <distancias_anteriores_4_27> <distancias_anteriores_4_28> <distancias_anteriores_4_29> <distancias_anteriores_4_30> <distancias_anteriores_4_31> 
+INFO:Xst:2261 - The FF/Latch <distancias_anteriores_3_20> in Unit <controlador_sensor_distancia> is equivalent to the following 11 FFs/Latches, which will be removed : <distancias_anteriores_3_21> <distancias_anteriores_3_22> <distancias_anteriores_3_23> <distancias_anteriores_3_24> <distancias_anteriores_3_25> <distancias_anteriores_3_26> <distancias_anteriores_3_27> <distancias_anteriores_3_28> <distancias_anteriores_3_29> <distancias_anteriores_3_30> <distancias_anteriores_3_31> 
+INFO:Xst:2261 - The FF/Latch <distancias_anteriores_2_20> in Unit <controlador_sensor_distancia> is equivalent to the following 11 FFs/Latches, which will be removed : <distancias_anteriores_2_21> <distancias_anteriores_2_22> <distancias_anteriores_2_23> <distancias_anteriores_2_24> <distancias_anteriores_2_25> <distancias_anteriores_2_26> <distancias_anteriores_2_27> <distancias_anteriores_2_28> <distancias_anteriores_2_29> <distancias_anteriores_2_30> <distancias_anteriores_2_31> 
+INFO:Xst:2261 - The FF/Latch <distancias_anteriores_1_20> in Unit <controlador_sensor_distancia> is equivalent to the following 11 FFs/Latches, which will be removed : <distancias_anteriores_1_21> <distancias_anteriores_1_22> <distancias_anteriores_1_23> <distancias_anteriores_1_24> <distancias_anteriores_1_25> <distancias_anteriores_1_26> <distancias_anteriores_1_27> <distancias_anteriores_1_28> <distancias_anteriores_1_29> <distancias_anteriores_1_30> <distancias_anteriores_1_31> 
 WARNING:Xst:1710 - FF/Latch <seg_7> (without init value) has a constant value of 1 in block <seven_seg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contador_en_espera_0> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <contador_en_espera_1> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <main> ...
 
 Optimizing unit <servo_pwm> ...
 
 Optimizing unit <controlador_sensor_distancia> ...
-WARNING:Xst:1293 - FF/Latch <contador_en_espera_0> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <contador_en_espera_1> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <contador_en_espera_0> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <contador_en_espera_1> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <contador_en_espera_0> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <contador_en_espera_1> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <contador_en_espera_0> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <contador_en_espera_1> has a constant value of 0 in block <controlador_sensor_distancia>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <receptor_serial> ...
 
@@ -699,6 +729,16 @@ Optimizing unit <bcd> ...
 Optimizing unit <seven_seg> ...
 
 Optimizing unit <controlador_etapa> ...
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_18> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_17> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_16> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_15> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_14> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_13> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_12> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_11> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_10> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <controlador_sensor_distancia/distancia_9> of sequential type is unconnected in block <main>.
 WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/state_0> of sequential type is unconnected in block <main>.
 WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/state_1> of sequential type is unconnected in block <main>.
 WARNING:Xst:2677 - Node <controlador_etapa/receptor_serial/cont_50_0> of sequential type is unconnected in block <main>.
@@ -793,7 +833,7 @@ WARNING:Xst:2677 - Node <controlador_etapa/clockDivider_receptor/clk> of sequent
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 53.
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 66.
 
 Final Macro Processing ...
 
@@ -801,8 +841,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 380
- Flip-Flops                                            : 380
+# Registers                                            : 528
+ Flip-Flops                                            : 528
 
 =========================================================================
 
@@ -831,29 +871,29 @@ Design Statistics
 # IOs                              : 32
 
 Cell Usage :
-# BELS                             : 1918
+# BELS                             : 2284
 #      GND                         : 1
-#      INV                         : 77
-#      LUT1                        : 414
-#      LUT2                        : 71
-#      LUT2_D                      : 1
+#      INV                         : 89
+#      LUT1                        : 483
+#      LUT2                        : 85
+#      LUT2_D                      : 2
 #      LUT2_L                      : 2
-#      LUT3                        : 90
-#      LUT3_D                      : 2
-#      LUT3_L                      : 3
-#      LUT4                        : 218
-#      LUT4_D                      : 11
+#      LUT3                        : 43
+#      LUT3_D                      : 3
+#      LUT3_L                      : 1
+#      LUT4                        : 321
+#      LUT4_D                      : 14
 #      LUT4_L                      : 4
-#      MUXCY                       : 550
-#      MUXF5                       : 52
+#      MUXCY                       : 705
+#      MUXF5                       : 29
 #      MUXF6                       : 2
 #      VCC                         : 1
-#      XORCY                       : 419
-# FlipFlops/Latches                : 380
-#      FD                          : 72
-#      FDE                         : 61
+#      XORCY                       : 499
+# FlipFlops/Latches                : 528
+#      FD                          : 48
+#      FDE                         : 187
 #      FDR                         : 71
-#      FDRE                        : 162
+#      FDRE                        : 208
 #      FDS                         : 11
 #      FDSE                        : 3
 # Clock Buffers                    : 2
@@ -869,9 +909,9 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-5 
 
- Number of Slices:                      503  out of    960    52%  
- Number of Slice Flip Flops:            380  out of   1920    19%  
- Number of 4 input LUTs:                893  out of   1920    46%  
+ Number of Slices:                      630  out of    960    65%  
+ Number of Slice Flip Flops:            528  out of   1920    27%  
+ Number of 4 input LUTs:               1047  out of   1920    54%  
  Number of IOs:                          32
  Number of bonded IOBs:                  29  out of     83    34%  
  Number of GCLKs:                         2  out of     24     8%  
@@ -897,7 +937,7 @@ Clock Information:
 ----------------------------------------------+------------------------+-------+
 Clock Signal                                  | Clock buffer(FF name)  | Load  |
 ----------------------------------------------+------------------------+-------+
-clk                                           | BUFGP                  | 353   |
+clk                                           | BUFGP                  | 501   |
 controlador_etapa/clockDivider_transmisor/clk1| BUFG                   | 27    |
 ----------------------------------------------+------------------------+-------+
 
@@ -909,8 +949,8 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 10.194ns (Maximum Frequency: 98.094MHz)
-   Minimum input arrival time before clock: 4.525ns
+   Minimum period: 10.631ns (Maximum Frequency: 94.065MHz)
+   Minimum input arrival time before clock: 4.308ns
    Maximum output required time after clock: 4.134ns
    Maximum combinational path delay: No path found
 
@@ -920,46 +960,34 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 10.194ns (frequency: 98.094MHz)
-  Total number of paths / destination ports: 107963 / 768
+  Clock period: 10.631ns (frequency: 94.065MHz)
+  Total number of paths / destination ports: 154323 / 1134
 -------------------------------------------------------------------------
-Delay:               10.194ns (Levels of Logic = 22)
-  Source:            SevenSeg/BCDTo7Seg/disp_ctr_1 (FF)
+Delay:               10.631ns (Levels of Logic = 10)
+  Source:            controlador_sensor_distancia/distancia_8 (FF)
   Destination:       SevenSeg/BCDTo7Seg/seg_6 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: SevenSeg/BCDTo7Seg/disp_ctr_1 to SevenSeg/BCDTo7Seg/seg_6
+  Data Path: controlador_sensor_distancia/distancia_8 to SevenSeg/BCDTo7Seg/seg_6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.514   0.532  SevenSeg/BCDTo7Seg/disp_ctr_1 (SevenSeg/BCDTo7Seg/disp_ctr_1)
-     LUT1:I0->O            1   0.612   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<1>_rt (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<1>_rt)
-     MUXCY:S->O            1   0.404   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<1> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<1>)
-     MUXCY:CI->O           1   0.052   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<2> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<2>)
-     MUXCY:CI->O           1   0.052   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<3> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<3>)
-     MUXCY:CI->O           1   0.052   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<4> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<4>)
-     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<5> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<5>)
-     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<6> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<6>)
-     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<7> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<7>)
-     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<8> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<8>)
-     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<9> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<9>)
-     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<10> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<10>)
-     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<11> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<11>)
-     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<12> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<12>)
-     MUXCY:CI->O           1   0.051   0.000  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<13> (SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_cy<13>)
-     XORCY:CI->O           4   0.699   0.651  SevenSeg/BCDTo7Seg/Madd__old_disp_ctr_24_xor<14> (SevenSeg/BCDTo7Seg/_old_disp_ctr_24<14>)
-     LUT2:I0->O            1   0.612   0.000  SevenSeg/BCDTo7Seg/Mcompar_old_sseg_25_cmp_le0000_lut<6> (SevenSeg/BCDTo7Seg/Mcompar_old_sseg_25_cmp_le0000_lut<6>)
-     MUXCY:S->O           14   0.752   0.919  SevenSeg/BCDTo7Seg/Mcompar_old_sseg_25_cmp_le0000_cy<6> (SevenSeg/BCDTo7Seg/old_sseg_25_cmp_le0000)
-     LUT3:I1->O            1   0.612   0.000  SevenSeg/BCDTo7Seg/_old_sseg_25<1>91_F (N305)
-     MUXF5:I0->O           1   0.278   0.509  SevenSeg/BCDTo7Seg/_old_sseg_25<1>91 (SevenSeg/BCDTo7Seg/_old_sseg_25<1>91)
-     LUT3:I0->O            1   0.612   0.000  SevenSeg/BCDTo7Seg/_old_sseg_25<1>126_F (N303)
-     MUXF5:I0->O           8   0.278   0.712  SevenSeg/BCDTo7Seg/_old_sseg_25<1>126 (SevenSeg/BCDTo7Seg/_old_sseg_25<1>)
-     LUT4:I1->O            1   0.612   0.000  SevenSeg/BCDTo7Seg/Mrom_seg_mux000121 (SevenSeg/BCDTo7Seg/Mrom_seg_mux00012)
+     FDE:C->Q             20   0.514   1.089  controlador_sensor_distancia/distancia_8 (controlador_sensor_distancia/distancia_8)
+     LUT4:I0->O            1   0.612   0.000  SevenSeg/decToBCD/memreg_mux00581_F (N181)
+     MUXF5:I0->O           5   0.278   0.607  SevenSeg/decToBCD/memreg_mux00581 (SevenSeg/decToBCD/Madd__add0017_lut<2>)
+     LUT4:I1->O            1   0.612   0.360  SevenSeg/decToBCD/Madd__add0020_cy<1>11_SW0 (N81)
+     LUT4_D:I3->O          3   0.612   0.454  SevenSeg/decToBCD/Madd__add0020_cy<1>11 (SevenSeg/decToBCD/Madd__add0020_cy<1>)
+     LUT4:I3->O            3   0.612   0.520  SevenSeg/decToBCD/memreg_mux009811 (SevenSeg/decToBCD/N5)
+     LUT3:I1->O            1   0.612   0.360  SevenSeg/BCDTo7Seg/_old_sseg_26<0>75_SW1_SW2 (N122)
+     LUT4:I3->O            1   0.612   0.000  SevenSeg/BCDTo7Seg/_old_sseg_26<0>115_G (N184)
+     MUXF5:I1->O           1   0.278   0.360  SevenSeg/BCDTo7Seg/_old_sseg_26<0>115 (SevenSeg/BCDTo7Seg/_old_sseg_26<0>115)
+     LUT4:I3->O            8   0.612   0.646  SevenSeg/BCDTo7Seg/_old_sseg_26<0>161 (SevenSeg/BCDTo7Seg/_old_sseg_26<0>)
+     LUT4:I3->O            1   0.612   0.000  SevenSeg/BCDTo7Seg/Mrom_seg_mux000121 (SevenSeg/BCDTo7Seg/Mrom_seg_mux00012)
      FD:D                      0.268          SevenSeg/BCDTo7Seg/seg_2
     ----------------------------------------
-    Total                     10.194ns (6.871ns logic, 3.323ns route)
-                                       (67.4% logic, 32.6% route)
+    Total                     10.631ns (6.234ns logic, 4.397ns route)
+                                       (58.6% logic, 41.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'controlador_etapa/clockDivider_transmisor/clk1'
@@ -977,25 +1005,25 @@ Delay:               7.766ns (Levels of Logic = 22)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             2   0.514   0.532  controlador_etapa/transmisor_serial/cont_delay_1 (controlador_etapa/transmisor_serial/cont_delay_1)
-     LUT1:I0->O            1   0.612   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<1>_rt (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<1>_rt)
-     MUXCY:S->O            1   0.404   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<1> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<1>)
-     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<2> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<2>)
-     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<3> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<3>)
-     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<4> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<4>)
-     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<5> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<5>)
-     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<6> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<6>)
-     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<7> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<7>)
-     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<8> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<8>)
-     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<9> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<9>)
-     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<10> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<10>)
-     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<11> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<11>)
-     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<12> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<12>)
-     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<13> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<13>)
-     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<14> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<14>)
-     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<15> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<15>)
-     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<16> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<16>)
-     MUXCY:CI->O           0   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<17> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_cy<17>)
-     XORCY:CI->O           1   0.699   0.387  controlador_etapa/transmisor_serial/Madd_old_cont_delay_22_add0000_xor<18> (controlador_etapa/transmisor_serial/old_cont_delay_22_add0000<18>)
+     LUT1:I0->O            1   0.612   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<1>_rt (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<1> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<2> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<3> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<4> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<5> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<6> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<7> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<8> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<9> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<10> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<11> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<12> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<13> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<14> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<15> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<16> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<16>)
+     MUXCY:CI->O           0   0.051   0.000  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<17> (controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_cy<17>)
+     XORCY:CI->O           1   0.699   0.387  controlador_etapa/transmisor_serial/Madd_old_cont_delay_23_add0000_xor<18> (controlador_etapa/transmisor_serial/old_cont_delay_23_add0000<18>)
      LUT4:I2->O            1   0.612   0.000  controlador_etapa/transmisor_serial/state_not00011_wg_lut<4> (controlador_etapa/transmisor_serial/state_not00011_wg_lut<4>)
      MUXCY:S->O           20   0.641   1.089  controlador_etapa/transmisor_serial/state_not00011_wg_cy<4> (controlador_etapa/transmisor_serial/cont_delay_and0000)
      LUT2:I0->O            1   0.612   0.357  controlador_etapa/transmisor_serial/state_not00011 (controlador_etapa/transmisor_serial/state_not0001)
@@ -1006,25 +1034,24 @@ Delay:               7.766ns (Levels of Logic = 22)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 56 / 55
+  Total number of paths / destination ports: 73 / 72
 -------------------------------------------------------------------------
-Offset:              4.525ns (Levels of Logic = 4)
+Offset:              4.308ns (Levels of Logic = 3)
   Source:            echo (PAD)
-  Destination:       controlador_sensor_distancia/state_1 (FF)
+  Destination:       controlador_sensor_distancia/contador_en_espera_35 (FF)
   Destination Clock: clk rising
 
-  Data Path: echo to controlador_sensor_distancia/state_1
+  Data Path: echo to controlador_sensor_distancia/contador_en_espera_35
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            26   1.106   1.223  echo_IBUF (echo_IBUF)
-     LUT3:I0->O            1   0.612   0.426  controlador_sensor_distancia/state_mux0002<0>1 (controlador_sensor_distancia/state_mux0002<0>)
-     LUT4:I1->O            1   0.612   0.000  controlador_sensor_distancia/Mmux_state_mux0000_3 (controlador_sensor_distancia/Mmux_state_mux0000_3)
-     MUXF5:I1->O           1   0.278   0.000  controlador_sensor_distancia/Mmux_state_mux0000_2_f5 (controlador_sensor_distancia/state_mux0000<0>)
-     FD:D                      0.268          controlador_sensor_distancia/state_1
+     IBUF:I->O             5   1.106   0.568  echo_IBUF (echo_IBUF)
+     LUT4:I2->O           34   0.612   1.142  controlador_sensor_distancia/contador_en_espera_mux0000<10>11 (controlador_sensor_distancia/N0)
+     LUT4:I1->O            1   0.612   0.000  controlador_sensor_distancia/contador_en_espera_mux0000<9>1 (controlador_sensor_distancia/contador_en_espera_mux0000<9>)
+     FDE:D                     0.268          controlador_sensor_distancia/contador_en_espera_9
     ----------------------------------------
-    Total                      4.525ns (2.876ns logic, 1.649ns route)
-                                       (63.6% logic, 36.4% route)
+    Total                      4.308ns (2.598ns logic, 1.710ns route)
+                                       (60.3% logic, 39.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -1067,14 +1094,14 @@ Offset:              4.040ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.71 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.69 secs
  
 --> 
 
-Total memory usage is 279504 kilobytes
+Total memory usage is 285520 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  158 (   0 filtered)
-Number of infos    :    7 (   0 filtered)
+Number of warnings :  176 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
 
